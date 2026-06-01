@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bolivia Crisis Monitor — 30 May 2026</title>
+<title>Bolivia Crisis Monitor — 1 June 2026</title>
 <!-- No external dependencies: uses system fonts so the page loads instantly and works fully offline. -->
 <style>
   :root {
@@ -646,8 +646,8 @@
   .cg-ek { width: 28px; height: 0; flex-shrink: 0; }
   .cg-ek-open { border-top: 3px solid var(--green); }
   .cg-ek-caution { border-top: 3px dashed var(--amber); }
-  .cg-ek-hard { border-top: 3px dashed #f97316; }
-  .cg-ek-severed { border-top: 3px dotted var(--red); }
+  .cg-ek-hard { border-top: 3px dotted #f97316; }
+  .cg-ek-severed { border-top: 2px dotted var(--red); opacity: 0.6; }
   .cg-nk { width: 12px; height: 12px; flex-shrink: 0; border: 2px solid; }
   .cg-nk-hub { background: rgba(96,165,250,0.25); border-color: #60a5fa; border-radius: 50%; }
   .cg-nk-border { background: rgba(192,132,252,0.25); border-color: #c084fc; border-radius: 3px; }
@@ -656,9 +656,9 @@
   svg.cg-graph { width: 100%; height: auto; display: block; touch-action: manipulation; }
   .cg-edge { stroke-linecap: round; transition: stroke-width 0.15s, opacity 0.15s; cursor: pointer; }
   .cg-edge.open { stroke: var(--green); stroke-width: 2.4; }
-  .cg-edge.caution { stroke: var(--amber); stroke-width: 2.4; stroke-dasharray: 9 5; }
-  .cg-edge.hard { stroke: #f97316; stroke-width: 2.4; stroke-dasharray: 4 6; }
-  .cg-edge.severed { stroke: var(--red); stroke-width: 2.2; stroke-dasharray: 1.5 6; }
+  .cg-edge.caution { stroke: var(--amber); stroke-width: 2.4; stroke-dasharray: 10 6; }
+  .cg-edge.hard { stroke: #f97316; stroke-width: 3; stroke-dasharray: 0.5 6; stroke-linecap: round; }
+  .cg-edge.severed { stroke: var(--red); stroke-width: 1.6; stroke-dasharray: 2 9; opacity: 0.6; }
   .cg-edge.dim { opacity: 0.12; }
   .cg-edge.hot { stroke-width: 4.5; }
   .cg-node-hit { cursor: pointer; }
@@ -776,14 +776,14 @@
 <header class="header">
   <div>
     <div class="header-title"><span class="country">BOLIVIA</span> — CRISIS MONITOR</div>
-    <div class="header-meta">SOURCE: ABC / RED UNO / EL DEBER / EFE / INFOBAE / LA RAZÓN / LA PATRIA · COMPILED 30 MAY 2026</div>
+    <div class="header-meta">SOURCE: ABC / RED UNO / EL DEBER / EFE / INFOBAE / LA RAZÓN / LA PATRIA · COMPILED 1 JUNE 2026</div>
   </div>
   <div class="header-right">
     <div>
       <div class="alert-pill">⚠ ALERT LEVEL: CRITICAL</div>
     </div>
     <div class="day-counter">
-      DAY 30
+      DAY 32
       <span>of protests</span>
     </div>
   </div>
@@ -793,7 +793,7 @@
 
   <!-- LAST UPDATED — edit this stamp by hand each update -->
   <div class="updated-banner">
-    <span class="ub-stamp">Last updated: 30 May 2026, 08:00 BOT (Bolivia time)</span>
+    <span class="ub-stamp">Last updated: 1 June 2026, 09:00 BOT (Bolivia time)</span>
     <span class="ub-note">This is a snapshot. Road and border conditions change daily — always verify locally before travelling.</span>
   </div>
 
@@ -802,24 +802,24 @@
     <div class="sec-label">Current Situation</div>
     <div class="metrics-grid">
       <div class="metric-card mc-red">
-        <div class="metric-num">93</div>
+        <div class="metric-num">89</div>
         <div class="metric-label">Active Blockades</div>
-        <div class="metric-sub">↑ record — ABC May 30 · La Paz 22, Cbba 21, Oruro 19, Potosí 15</div>
+        <div class="metric-sub">ABC 31 May · 6 departments · La Paz &amp; El Alto worst hit</div>
       </div>
       <div class="metric-card mc-amber">
         <div class="metric-num">5+</div>
         <div class="metric-label">Deaths Attributed</div>
         <div class="metric-sub">blood reserves "at the limit" · El Alto losing $6.5M/day</div>
       </div>
-      <div class="metric-card" style="border-color:#16a34a;background:var(--surface);">
-        <div class="metric-num" style="color:#22c55e;font-size:28px;">WARRANTS<br>LIFTED</div>
-        <div class="metric-label">Dialogue Reopened</div>
-        <div class="metric-sub">arrest orders vs. COB/Túpac Katari leaders cancelled May 29</div>
+      <div class="metric-card mc-red">
+        <div class="metric-num" style="font-size:26px;">DIALOGUE<br>REJECTED</div>
+        <div class="metric-label">COB Assembly · 31 May</div>
+        <div class="metric-sub">voted to keep blockades despite warrants being lifted</div>
       </div>
-      <div class="metric-card mc-blue">
-        <div class="metric-num" style="font-size:28px;">AMPLIADO</div>
-        <div class="metric-label">Decisive Assembly</div>
-        <div class="metric-sub">Sat 14h00 La Paz: movilizados decide continue vs. negotiate</div>
+      <div class="metric-card mc-amber">
+        <div class="metric-num" style="font-size:24px;">HUM.<br>CORRIDORS</div>
+        <div class="metric-label">Sole Concession</div>
+        <div class="metric-sub">COB to allow medicine, food, ambulances through</div>
       </div>
     </div>
   </div>
@@ -883,40 +883,40 @@
             <text x="28" y="60.5" class="cx-yl">75</text>
             <line x1="34" y1="14.0" x2="370" y2="14.0" class="cx-grid"/>
             <text x="28" y="17.0" class="cx-yl">100</text>
-            <rect x="43.6" y="94.0" width="28.8" height="94.0" class="cx-bar" rx="1.5"/>
-            <text x="58.0" y="90.0" class="cx-val">54</text>
-            <text x="58.0" y="202.0" class="cx-xl">Sun 24</text>
-            <text x="58.0" y="213.0" class="cx-xl2">May 24</text>
-            <rect x="91.6" y="85.3" width="28.8" height="102.7" class="cx-bar" rx="1.5"/>
-            <text x="106.0" y="81.3" class="cx-val">59</text>
-            <text x="106.0" y="202.0" class="cx-xl">Mon 25</text>
-            <text x="106.0" y="213.0" class="cx-xl2">May 25</text>
-            <rect x="139.6" y="80.1" width="28.8" height="107.9" class="cx-bar" rx="1.5"/>
-            <text x="154.0" y="76.1" class="cx-val">62</text>
-            <text x="154.0" y="202.0" class="cx-xl">Tue 26</text>
-            <text x="154.0" y="213.0" class="cx-xl2">May 26</text>
-            <rect x="187.6" y="73.2" width="28.8" height="114.8" class="cx-bar" rx="1.5"/>
-            <text x="202.0" y="69.2" class="cx-val">66</text>
-            <text x="202.0" y="202.0" class="cx-xl">Wed 27</text>
-            <text x="202.0" y="213.0" class="cx-xl2">May 27</text>
-            <rect x="235.6" y="76.6" width="28.8" height="111.4" class="cx-bar" rx="1.5"/>
-            <text x="250.0" y="72.6" class="cx-val">64</text>
-            <text x="250.0" y="202.0" class="cx-xl">Thu 28</text>
-            <text x="250.0" y="213.0" class="cx-xl2">May 28</text>
-            <rect x="283.6" y="55.8" width="28.8" height="132.2" class="cx-bar" rx="1.5"/>
-            <text x="298.0" y="51.8" class="cx-val">76</text>
-            <text x="298.0" y="202.0" class="cx-xl">Fri 29</text>
-            <text x="298.0" y="213.0" class="cx-xl2">May 29</text>
-            <rect x="331.6" y="26.2" width="28.8" height="161.8" class="cx-bar peak" rx="1.5"/>
-            <text x="346.0" y="22.2" class="cx-val peak">93</text>
-            <text x="346.0" y="202.0" class="cx-xl">Sat 30</text>
-            <text x="346.0" y="213.0" class="cx-xl2">May 30</text>
+            <rect x="43.6" y="80.1" width="28.8" height="107.9" class="cx-bar" rx="1.5"/>
+            <text x="58.0" y="76.1" class="cx-val">62</text>
+            <text x="58.0" y="202.0" class="cx-xl">Tue 26</text>
+            <text x="58.0" y="213.0" class="cx-xl2">May 26</text>
+            <rect x="91.6" y="73.2" width="28.8" height="114.8" class="cx-bar" rx="1.5"/>
+            <text x="106.0" y="69.2" class="cx-val">66</text>
+            <text x="106.0" y="202.0" class="cx-xl">Wed 27</text>
+            <text x="106.0" y="213.0" class="cx-xl2">May 27</text>
+            <rect x="139.6" y="76.6" width="28.8" height="111.4" class="cx-bar" rx="1.5"/>
+            <text x="154.0" y="72.6" class="cx-val">64</text>
+            <text x="154.0" y="202.0" class="cx-xl">Thu 28</text>
+            <text x="154.0" y="213.0" class="cx-xl2">May 28</text>
+            <rect x="187.6" y="55.8" width="28.8" height="132.2" class="cx-bar" rx="1.5"/>
+            <text x="202.0" y="51.8" class="cx-val">76</text>
+            <text x="202.0" y="202.0" class="cx-xl">Fri 29</text>
+            <text x="202.0" y="213.0" class="cx-xl2">May 29</text>
+            <rect x="235.6" y="26.2" width="28.8" height="161.8" class="cx-bar peak" rx="1.5"/>
+            <text x="250.0" y="22.2" class="cx-val peak">93</text>
+            <text x="250.0" y="202.0" class="cx-xl">Sat 30</text>
+            <text x="250.0" y="213.0" class="cx-xl2">May 30</text>
+            <rect x="283.6" y="33.1" width="28.8" height="154.9" class="cx-bar" rx="1.5"/>
+            <text x="298.0" y="29.1" class="cx-val">89</text>
+            <text x="298.0" y="202.0" class="cx-xl">Sun 31</text>
+            <text x="298.0" y="213.0" class="cx-xl2">May 31</text>
+            <rect x="331.6" y="33.1" width="28.8" height="154.9" class="cx-bar" rx="1.5"/>
+            <text x="346.0" y="29.1" class="cx-val">89</text>
+            <text x="346.0" y="202.0" class="cx-xl">Mon 1</text>
+            <text x="346.0" y="213.0" class="cx-xl2">Jun 1</text>
           </svg>
         </div>
 
       </div>
       <div class="chart-note">
-        <b>Reading these together:</b> the weekly chart (left) shows the month-long climb from ~21 to 93; the daily chart (right) zooms into the last week, where the count kept rising even as dialogue efforts began — May 28 dipped slightly (64) before jumping to a record 93 by May 30. Both axes are blockade counts (0–100). Figures are ABC national-road-network reports; local/municipal blockades are not included.
+        <b>Reading these together:</b> the weekly chart (left) shows the month-long climb from ~21 to a peak of 93; the daily chart (right) zooms into the last week — the count peaked at 93 on May 30, then eased slightly to 89 as the COB announced "humanitarian corridors," but it has not fallen meaningfully and dialogue was rejected on May 31. Both axes are blockade counts (0–100). Figures are ABC national-road-network reports; local/municipal blockades are not included.
       </div>
     </div>
   </div>
@@ -927,10 +927,10 @@
     <div class="cg-legend">
       <div class="cg-legend-block">
         <h4>Route status (lines)</h4>
-        <div class="cg-row"><span class="cg-ek cg-ek-open"></span><span><b>Open</b> — passable, normal/light traffic</span></div>
-        <div class="cg-row"><span class="cg-ek cg-ek-caution"></span><span><b>Caution</b> — partial/intermittent; workarounds exist</span></div>
-        <div class="cg-row"><span class="cg-ek cg-ek-hard"></span><span><b>Hard-blocked</b> — cut; only difficult detours / on foot</span></div>
-        <div class="cg-row"><span class="cg-ek cg-ek-severed"></span><span><b>Severed</b> — no viable road link right now</span></div>
+        <div class="cg-row"><span class="cg-ek cg-ek-open"></span><span><b>Open</b> (solid) — passable, normal/light traffic</span></div>
+        <div class="cg-row"><span class="cg-ek cg-ek-caution"></span><span><b>Caution</b> (dashed) — partial/intermittent; workarounds exist</span></div>
+        <div class="cg-row"><span class="cg-ek cg-ek-hard"></span><span><b>Hard-blocked</b> (dotted) — cut; only difficult detours / on foot</span></div>
+        <div class="cg-row"><span class="cg-ek cg-ek-severed"></span><span><b>Severed</b> (faint) — no viable road link right now</span></div>
       </div>
       <div class="cg-legend-block">
         <h4>Locations (nodes)</h4>
@@ -940,7 +940,7 @@
       </div>
     </div>
     <div class="cg-card">
-      <svg class="cg-graph" id="cgGraph" viewBox="0 0 860 760" xmlns="http://www.w3.org/2000/svg" aria-label="Connectivity graph of Bolivia tourist hubs and border crossings">
+      <svg class="cg-graph" id="cgGraph" viewBox="-105 0 1075 760" xmlns="http://www.w3.org/2000/svg" aria-label="Connectivity graph of Bolivia tourist hubs and border crossings">
         <!-- Static fallback: rendered server-side so the graph shows even without JS. JS enhances with interactivity. -->
         <line class="cg-edge hard" x1="140" y1="360" x2="150" y2="402" data-a="La Paz" data-b="Patacamaya"/>
         <line class="cg-edge hard" x1="150" y1="402" x2="199" y2="440" data-a="Patacamaya" data-b="Oruro"/>
@@ -961,7 +961,6 @@
         <line class="cg-edge caution" x1="212" y1="575" x2="138" y2="605" data-a="Uyuni" data-b="Ollagüe"/>
         <line class="cg-edge caution" x1="212" y1="575" x2="165" y2="695" data-a="Uyuni" data-b="Hito Cajón"/>
         <line class="cg-edge severed" x1="288" y1="528" x2="104" y2="510" data-a="Potosí" data-b="Pisiga"/>
-        <line class="cg-edge caution" x1="322" y1="500" x2="455" y2="432" data-a="Sucre" data-b="Santa Cruz"/>
         <line class="cg-edge caution" x1="455" y1="432" x2="410" y2="458" data-a="Santa Cruz" data-b="Samaipata"/>
         <line class="cg-edge open" x1="455" y1="432" x2="424" y2="410" data-a="Santa Cruz" data-b="Buena Vista"/>
         <line class="cg-edge caution" x1="410" y1="458" x2="322" y2="500" data-a="Samaipata" data-b="Sucre"/>
@@ -980,6 +979,8 @@
         <line class="cg-edge severed" x1="175" y1="250" x2="315" y2="70" data-a="Rurrenabaque" data-b="Guayaramerín"/>
         <line class="cg-edge severed" x1="175" y1="250" x2="95" y2="80" data-a="Rurrenabaque" data-b="Cobija"/>
         <line class="cg-edge open" x1="434" y1="660" x2="495" y2="668" data-a="Yacuiba" data-b="Cañada Oruro"/>
+        <line class="cg-edge hard" x1="346" y1="304" x2="455" y2="432" data-a="Trinidad" data-b="Santa Cruz"/>
+        <line class="cg-edge severed" x1="346" y1="304" x2="175" y2="250" data-a="Trinidad" data-b="Rurrenabaque"/>
         <g class="cg-node-hit" data-name="La Paz">
           <circle class="cg-dot hub" cx="140" cy="360" r="7"/>
           <text class="cg-lbl" x="150" y="363.5">La Paz</text>
@@ -1035,6 +1036,10 @@
         <g class="cg-node-hit" data-name="Rurrenabaque">
           <circle class="cg-dot hub" cx="175" cy="250" r="7"/>
           <text class="cg-lbl" x="185" y="253.5">Rurrenabaque</text>
+        </g>
+        <g class="cg-node-hit" data-name="Trinidad">
+          <circle class="cg-dot hub" cx="346" cy="304" r="7"/>
+          <text class="cg-lbl" x="356" y="307.5">Trinidad</text>
         </g>
         <g class="cg-node-hit" data-name="Kasani">
           <circle class="cg-dot border" cx="40" cy="342" r="5.5"/>
@@ -1362,6 +1367,16 @@
         <div><span class="log-tag lt-spread">RECORD ↑</span></div>
         <div class="log-desc"><b>93 blockade points — a new record</b> across six departments (La Paz 22, Cochabamba 21, Oruro 19, Potosí 15, Chuquisaca 11, Santa Cruz 5). The protests reach the one-month mark. A decisive <i>ampliado nacional</i> (mass assembly) is called for <b>14h00 Saturday in La Paz</b> to decide whether to negotiate or escalate — with talks expected to follow on Sunday if the bases agree. <span class="hi-a">The next 48 hours are pivotal.</span></div>
       </div>
+      <div class="log-row" style="background: #100600; border-left: 2px solid var(--red);">
+        <div class="log-date">May 31, 2026</div>
+        <div><span class="log-tag lt-violence">DIALOGUE OFF</span></div>
+        <div class="log-desc"><b>The COB assembly rejects dialogue and votes to keep the blockades</b> until President Paz resigns — even though the courts had lifted the arrest warrant against COB leader Mario Argollo two days earlier, which had been the movement's stated precondition. The government's planned Sunday negotiating table was suspended indefinitely. <span class="hi-red">The diplomatic opening has closed.</span> The sole softening: the COB announced <b>"humanitarian corridors"</b> to let medicine, food and ambulances pass — but stressed this is not a relaxation of the protest.</div>
+      </div>
+      <div class="log-row" style="background: #0f0d00; border-left: 2px solid var(--amber);">
+        <div class="log-date">Jun 1, 2026</div>
+        <div><span class="log-tag lt-spread">DAY 32</span></div>
+        <div class="log-desc"><b>Blockades hold at ~89 points</b> across the same six departments as the crisis enters its second month with no negotiation in prospect. Attention turns to whether the government will invoke the military-deployment law it passed on May 27. Humanitarian corridors are reported functioning unevenly. <span class="hi-a">For travellers, the practical situation is unchanged: the altiplano remains impassable by road and air travel is the only reliable option.</span></div>
+      </div>
     </div>
   </div>
 
@@ -1485,16 +1500,16 @@
     </div>
 
     <div class="dec-verdict">
-      <b>General guidance (30 May):</b> Air travel remains the only reliable way to move between regions, and all major airports are operating — though airport <i>access roads</i>, especially in La Paz, can be disrupted. <span class="go">Treat Santa Cruz and the eastern lowlands as the safe anchor</span> and <span class="nogo">treat the La Paz–Oruro–Cochabamba altiplano as off-limits by road.</span> Although the May 29 cancellation of the leaders' arrest warrants has reopened the path to dialogue, blockades are still at a record 93 and no agreement is in place — so no traveller should yet build plans around near-term improvement. The single most important rule: <b>do not attempt long-distance road travel through the highlands</b>, and reconfirm any flight and airport-access status the same day you travel. Register with your embassy or consulate so you receive official alerts directly.
+      <b>General guidance (1 June):</b> Air travel remains the only reliable way to move between regions, and all major airports are operating — though airport <i>access roads</i>, especially in La Paz, can be disrupted. <span class="go">Treat Santa Cruz and the eastern lowlands as the safe anchor</span> and <span class="nogo">treat the La Paz–Oruro–Cochabamba altiplano as off-limits by road.</span> The COB rejected dialogue on May 31 and the blockades continue around 89 points with no agreement in sight — so no traveller should build plans around near-term improvement, and a forced clearance could raise tensions further. The single most important rule: <b>do not attempt long-distance road travel through the highlands</b>, and reconfirm any flight and airport-access status the same day you travel. Register with your embassy or consulate so you receive official alerts directly.
     </div>
   </div>
 
   <div class="status-box">
     <div class="status-para">
-      <b>Trajectory:</b> <span class="hi-r">blockades at a record 93, but a genuine diplomatic opening has appeared.</span> The raw numbers are the worst yet — the country hit a one-month peak of 93 blockade points on May 30. Yet on May 29 the government cancelled the arrest warrants against the two main protest leaders, removing the precondition they had set for negotiating. <span class="hi-a">For the first time, the obstacle that wrecked the May 28 talks is gone.</span>
+      <b>Trajectory:</b> <span class="hi-r">the diplomatic opening has closed and the stand-off has hardened.</span> After peaking at a record 93 blockades on May 30, the count has held around 89. Crucially, although the courts lifted the arrest warrants against the protest leaders on May 29 — removing their stated precondition — the COB assembly on May 31 still <span class="hi-r">rejected dialogue outright and voted to maintain the blockades until President Paz resigns.</span> The government's negotiating table was suspended indefinitely.
     </div>
     <div class="status-para">
-      <b>The pivotal 48 hours:</b> A mass assembly (<i>ampliado nacional</i>) is set for Saturday afternoon in La Paz, where the mobilised sectors will decide whether to negotiate or escalate further, with talks expected Sunday if the bases agree. Either (1) the assembly accepts dialogue and a de-escalation finally begins, or (2) it votes to intensify, and Paz — now legally armed with the military-deployment law — may declare a state of exception. <span class="hi-r">The second path would likely mean a sharp, possibly violent, escalation first.</span> The warrant cancellation tilts the odds slightly toward dialogue, but the record blockade count shows the pressure is still building.
+      <b>What comes next:</b> with negotiation rejected, the two plausible paths are (1) the blockades grind on, deepening the food, fuel, oxygen and medicine shortages until economic exhaustion forces someone to move, or (2) Paz invokes the military-deployment law he passed on May 27 and attempts to clear routes by force. <span class="hi-r">The second path risks a sharp, possibly violent escalation</span> — and two earlier clearing operations already failed. The one humane development is the COB's pledge of "humanitarian corridors" for medicine, food and ambulances, though reports say these function unevenly.
     </div>
     <div class="status-para">
       <b>Humanitarian backdrop:</b> worsening regardless of the politics. Blood reserves are reported "at the limit," hospitals are short of oxygen and medicine, and El Alto alone is losing an estimated $6.5M per day. The longer this runs, the more the basic functioning of the country degrades.
@@ -1516,7 +1531,7 @@
 </div><!-- /container -->
 
 <footer class="footer">
-  <div>BOLIVIA CRISIS MONITOR · UPDATED 30 MAY 2026 · TRAVEL SAFETY REFERENCE · NOT OFFICIAL ADVICE</div>
+  <div>BOLIVIA CRISIS MONITOR · UPDATED 1 JUNE 2026 · TRAVEL SAFETY REFERENCE · NOT OFFICIAL ADVICE</div>
   <div>LIVE ROAD STATUS → transitabilidad.abc.gob.bo · ALWAYS REGISTER WITH & CONTACT YOUR OWN EMBASSY OR CONSULATE</div>
 </footer>
 
@@ -1528,7 +1543,7 @@
       "Oruro":[199,440,"hub"],"Patacamaya":[150,402,"hub"],"Cochabamba":[262,408,"hub"],
       "Sucre":[322,500,"hub"],"Potosí":[288,528,"hub"],"Uyuni":[212,575,"hub"],
       "Tupiza":[292,628,"hub"],"Santa Cruz":[455,432,"hub"],"Samaipata":[410,458,"hub"],
-      "Buena Vista":[424,410,"hub"],"Rurrenabaque":[175,250,"hub"],
+      "Buena Vista":[424,410,"hub"],"Rurrenabaque":[175,250,"hub"],"Trinidad":[346,304,"hub"],
       "Kasani":[40,342,"border"],"Desaguadero":[62,378,"border"],"Puerto Acosta":[60,300,"border"],
       "Tambo Quemado":[86,458,"border"],"Pisiga":[104,510,"border"],"Ollagüe":[138,605,"border"],
       "Hito Cajón":[165,695,"border"],"Villazón":[300,672,"border"],"Bermejo":[388,700,"border"],
@@ -1555,8 +1570,7 @@
       ["Uyuni","Ollagüe","caution","Remote Chile crossing; road quiet but isolated, verify fuel & passage."],
       ["Uyuni","Hito Cajón","caution","Salt-flats tourist route to San Pedro de Atacama (Chile); generally usable, remote."],
       ["Potosí","Pisiga","severed","No direct link; Pisiga reached via Oruro which is hard-blocked."],
-      ["Sucre","Santa Cruz","caution","Long eastern route; Chuquisaca has cuts but lowland approach is lighter."],
-      ["Santa Cruz","Samaipata","caution","One blockade reported at El Fuerte sector (Samaipata) on the Bermejo–Mairana road."],
+      ["Santa Cruz","Samaipata","caution","Blockade reported at the El Fuerte sector (Samaipata) on the Santa Cruz–Sucre corridor. This is also the route toward Sucre."],
       ["Santa Cruz","Buena Vista","open","Northern Santa Cruz corridor largely open; light restrictions only."],
       ["Samaipata","Sucre","caution","Mountain road toward Chuquisaca; partial cuts further west."],
       ["Santa Cruz","Yacuiba","open","Southern Chaco route to the Argentine border generally open."],
@@ -1573,7 +1587,9 @@
       ["Tupiza","Bermejo","caution","Argentine crossing; Bermejo had detours but Aguas Blancas side noted passable with caution."],
       ["Rurrenabaque","Guayaramerín","severed","Northern Amazon Brazil crossing; no through road, region under humanitarian emergency."],
       ["Rurrenabaque","Cobija","severed","Pando Amazon crossing; isolated, no viable road link currently."],
-      ["Yacuiba","Cañada Oruro","open","Both southern Chaco crossings reachable from the open Santa Cruz lowland network."]
+      ["Yacuiba","Cañada Oruro","open","Both southern Chaco crossings reachable from the open Santa Cruz lowland network."],
+      ["Trinidad","Santa Cruz","hard","Main Beni–Santa Cruz road; Beni is under a humanitarian emergency and the corridor is heavily disrupted. The airport (TDD) still operates."],
+      ["Trinidad","Rurrenabaque","severed","No reliable through road across northern Beni right now; movement is effectively by air only."]
     ];
     const svg = document.getElementById("cgGraph");
     if (!svg) return;
