@@ -707,6 +707,37 @@
   .ap-dot.isolated { fill: rgba(249,115,22,0.3); stroke: #f97316; }
   .ap-dot.down { fill: rgba(239,68,68,0.3); stroke: #ef4444; }
   .ap-node:hover .ap-dot { opacity: 0.7; }
+
+  /* ─── FLIGHT NETWORK ─────────────────────────────────── */
+  .fl-edge { fill: none; cursor: pointer; transition: stroke-width 0.15s, opacity 0.15s; }
+  .fl-edge.normal { stroke: #22c55e; stroke-width: 2.8; }
+  .fl-edge.delays { stroke: #f97316; stroke-width: 2.8; stroke-dasharray: 11 6; }
+  .fl-edge.none   { stroke: #ff3b3b; stroke-width: 3.4; stroke-dasharray: 12 7; stroke-linecap: round; }
+  .fl-edge:hover  { stroke-width: 5.5; opacity: 1; }
+  .fl-edge.fl-hot { stroke-width: 5.5; opacity: 1; }
+  .fl-edge.fl-dim { opacity: 0.1; }
+  /* international flights: distinct double-stroke (halo) + brighter, leaves the map */
+  .intl-halo { stroke: #0a0a0b; stroke-width: 8; fill: none; }
+  .fl-edge.intl.normal { stroke: #38bdf8; stroke-width: 3.2; }
+  .fl-edge.intl.delays { stroke: #fb923c; stroke-width: 3.2; stroke-dasharray: 11 6; }
+  .fl-edge.intl.none   { stroke: #ff3b3b; stroke-width: 3.2; stroke-dasharray: 12 7; }
+  .intl-head.normal { fill: #38bdf8; }
+  .intl-head.delays { fill: #fb923c; }
+  .intl-head.none { fill: #ff3b3b; }
+  .intl-arrow { cursor: pointer; }
+  .intl-tag {
+    font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace;
+    font-size: 13px; font-weight: 700; fill: #e0f2fe;
+  }
+  .intl-flag { font-size: 15px; }
+  .fl-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: flex-start; margin: 12px 0 0; background: var(--surface2); border: 1px solid var(--border); padding: 12px 16px; }
+  .fl-row { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--text-dim); }
+  .fl-key { width: 30px; height: 0; flex-shrink: 0; }
+  .fl-key.normal { border-top: 3px solid #22c55e; }
+  .fl-key.delays { border-top: 3px dashed #f97316; }
+  .fl-key.none { border-top: 4px dashed #ff3b3b; }
+  .fl-key.intl { border-top: 3px solid #38bdf8; }
+  .fl-row b { color: var(--text); font-weight: 600; }
   .ap-lbl { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace; font-size: 10px; fill: var(--text); pointer-events: none; font-weight: 500; }
   .ap-note { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--blue); padding: 11px 14px; margin-top: 12px; font-size: 11.5px; color: var(--text-dim); line-height: 1.6; }
   .ap-note b { color: var(--text); font-weight: 600; }
@@ -1111,61 +1142,123 @@
 
   <!-- AIRPORT STATUS MAP -->
   <div>
-    <div class="sec-label">Airport Status — Operations &amp; Road Access</div>
+    <div class="sec-label">Airports &amp; Flight Network — Status, Road Access &amp; Connections</div>
     <div class="ap-legend">
       <div class="ap-row"><span class="ap-key open"></span><span><b>Operational + accessible</b> by road</span></div>
       <div class="ap-row"><span class="ap-key partial"></span><span><b>Operational</b>, but partial road closures</span></div>
       <div class="ap-row"><span class="ap-key isolated"></span><span><b>Operational</b>, but not reachable by road</span></div>
       <div class="ap-row"><span class="ap-key down"></span><span><b>Airport not operating</b></span></div>
     </div>
+    <div class="fl-legend">
+      <div class="fl-row"><span class="fl-key normal"></span><span><b>Normal operations</b> (green)</span></div>
+      <div class="fl-row"><span class="fl-key delays"></span><span><b>Delays recently</b> (dashed orange)</span></div>
+      <div class="fl-row"><span class="fl-key none"></span><span><b>No / cancelled service</b> (bold red)</span></div>
+      <div class="fl-row"><span class="fl-key intl"></span><span><b>International</b> (blue, exits the map ✈)</span></div>
+      <div class="fl-row" style="color:var(--text-muted);font-size:10px;">Schematic layout — positions simplified for clarity, not geographic. Tap any line for flight numbers.</div>
+    </div>
     <div class="ap-card">
-      <svg class="ap-graph" id="apGraph" viewBox="0 0 860 760" xmlns="http://www.w3.org/2000/svg" aria-label="Map of Bolivian airports colour-coded by operating and road-access status">
+      <svg class="ap-graph" id="apGraph" viewBox="-72 0 704 600" xmlns="http://www.w3.org/2000/svg" aria-label="Bolivian airports, status and flight network (schematic layout)">
         <!-- Static airport map: rendered in markup so it shows without JS. -->
-        <g class="ap-node" data-name="El Alto (La Paz)" data-status="partial" data-note="Access road blockaded on and off; passengers have had to walk ~3 km. Flights operate.">
-          <rect class="ap-dot partial" x="132" y="386" width="10" height="10" transform="rotate(45 137 391)"/>
-          <text class="ap-lbl" x="147" y="394">La Paz</text>
+        <g class="ap-flights">
+          <line class="fl-edge normal" x1="470" y1="300" x2="250" y2="330" data-a="Santa Cruz" data-b="Cochabamba" data-status="normal" data-flights="OB 511 · OB 515 · OB 521 · OB 627" data-note="Busiest domestic route; many daily frequencies."/>
+          <line class="fl-edge delays" x1="470" y1="300" x2="80" y2="300" data-a="Santa Cruz" data-b="La Paz" data-status="delays" data-flights="OB 712 · OB 718 · OB 730" data-note="Multiple daily, but El Alto access/altitude causing delays."/>
+          <line class="fl-edge delays" x1="250" y1="330" x2="80" y2="300" data-a="Cochabamba" data-b="La Paz" data-status="delays" data-flights="OB 612 · OB 620" data-note="Several daily; El Alto-end delays."/>
+          <line class="fl-edge normal" x1="470" y1="300" x2="380" y2="420" data-a="Santa Cruz" data-b="Sucre" data-status="normal" data-flights="OB 416 · OB 420" data-note="Daily BoA service."/>
+          <line class="fl-edge normal" x1="470" y1="300" x2="360" y2="565" data-a="Santa Cruz" data-b="Tarija" data-status="normal" data-flights="OB 530 · OB 534" data-note="Daily service to the wine region."/>
+          <line class="fl-edge normal" x1="470" y1="300" x2="300" y2="150" data-a="Santa Cruz" data-b="Trinidad" data-status="normal" data-flights="OB 360" data-note="BoA Regional."/>
+          <line class="fl-edge normal" x1="250" y1="330" x2="300" y2="150" data-a="Cochabamba" data-b="Trinidad" data-status="normal" data-flights="OB 364" data-note="BoA Regional."/>
+          <line class="fl-edge normal" x1="470" y1="300" x2="150" y2="520" data-a="Santa Cruz" data-b="Uyuni" data-status="normal" data-flights="OB 440" data-note="Salt-flats tourist route."/>
+          <line class="fl-edge normal" x1="80" y1="300" x2="150" y2="520" data-a="La Paz" data-b="Uyuni" data-status="normal" data-flights="OB 448" data-note="Salt-flats tourist route."/>
+          <line class="fl-edge normal" x1="300" y1="150" x2="150" y2="70" data-a="Trinidad" data-b="Cobija" data-status="normal" data-flights="OB 372" data-note="Amazon/north link."/>
+          <line class="fl-edge normal" x1="470" y1="300" x2="150" y2="70" data-a="Santa Cruz" data-b="Cobija" data-status="normal" data-flights="OB 376" data-note="Via Trinidad."/>
+          <line class="fl-edge delays" x1="80" y1="300" x2="250" y2="330" data-a="La Paz" data-b="Cochabamba" data-status="delays" data-flights="OB 600" data-note="Delays at El Alto."/>
+          <line class="fl-edge none" x1="250" y1="330" x2="380" y2="420" data-a="Cochabamba" data-b="Sucre" data-status="none" data-flights="" data-note="No reliable scheduled service currently."/>
+          <line class="fl-edge none" x1="80" y1="300" x2="80" y2="430" data-a="La Paz" data-b="Oruro" data-status="none" data-flights="" data-note="No scheduled commercial service."/>
+          <line class="fl-edge none" x1="470" y1="300" x2="300" y2="500" data-a="Santa Cruz" data-b="Potosí" data-status="none" data-flights="" data-note="No reliable scheduled service."/>
         </g>
-        <g class="ap-node" data-name="Jorge Wilstermann (Cochabamba)" data-status="partial" data-note="Airport operational; Cochabamba city ringed by heavy blockades.">
-          <rect class="ap-dot partial" x="260" y="433" width="10" height="10" transform="rotate(45 265 438)"/>
-          <text class="ap-lbl" x="275" y="441">Cochabamba</text>
+        <g class="ap-intl">
+          <g class="intl-arrow" data-hub="Santa Cruz" data-country="Brazil" data-status="normal" data-flights="OB 780 → São Paulo (GRU)">
+            <line class="intl-halo" x1="470.0" y1="300.0" x2="540.0" y2="309.8"/>
+            <line class="fl-edge intl normal" x1="470.0" y1="300.0" x2="540.0" y2="309.8"/>
+            <path class="intl-head normal" d="M 540.0 309.8 L 530.7 313.6 L 532.1 303.7 Z"/>
+            <text class="intl-tag" x="552.0" y="314.8" text-anchor="start"><tspan class="intl-flag">🇧🇷</tspan> Brazil</text>
+          </g>
+          <g class="intl-arrow" data-hub="Santa Cruz" data-country="USA" data-status="normal" data-flights="OB 800 → Miami · OB 812 → Washington">
+            <line class="intl-halo" x1="470.0" y1="300.0" x2="540.0" y2="343.7"/>
+            <line class="fl-edge intl normal" x1="470.0" y1="300.0" x2="540.0" y2="343.7"/>
+            <path class="intl-head normal" d="M 540.0 343.7 L 530.0 343.4 L 535.3 334.9 Z"/>
+            <text class="intl-tag" x="552.0" y="348.7" text-anchor="start"><tspan class="intl-flag">🇺🇸</tspan> USA</text>
+          </g>
+          <g class="intl-arrow" data-hub="Santa Cruz" data-country="Europe" data-status="normal" data-flights="OB 850 → Madrid">
+            <line class="intl-halo" x1="470.0" y1="300.0" x2="540.0" y2="400.0"/>
+            <line class="fl-edge intl normal" x1="470.0" y1="300.0" x2="540.0" y2="400.0"/>
+            <path class="intl-head normal" d="M 540.0 400.0 L 530.9 395.7 L 539.1 390.0 Z"/>
+            <text class="intl-tag" x="552.0" y="405.0" text-anchor="start"><tspan class="intl-flag">🇪🇺</tspan> Europe</text>
+          </g>
+          <g class="intl-arrow" data-hub="Santa Cruz" data-country="Argentina" data-status="normal" data-flights="OB 720 → Buenos Aires · OB 724 → Salta">
+            <line class="intl-halo" x1="470.0" y1="300.0" x2="479.8" y2="580.0"/>
+            <line class="fl-edge intl normal" x1="470.0" y1="300.0" x2="479.8" y2="580.0"/>
+            <path class="intl-head normal" d="M 479.8 580.0 L 474.5 571.5 L 484.5 571.2 Z"/>
+            <text class="intl-tag" x="491.8" y="585.0" text-anchor="start"><tspan class="intl-flag">🇦🇷</tspan> Argentina</text>
+          </g>
+          <g class="intl-arrow" data-hub="La Paz" data-country="Peru" data-status="delays" data-flights="OB 764 → Lima">
+            <line class="intl-halo" x1="80.0" y1="300.0" x2="20.0" y2="275.8"/>
+            <line class="fl-edge intl delays" x1="80.0" y1="300.0" x2="20.0" y2="275.8"/>
+            <path class="intl-head delays" d="M 20.0 275.8 L 29.9 274.4 L 26.2 283.6 Z"/>
+            <text class="intl-tag" x="8.0" y="280.8" text-anchor="end"><tspan class="intl-flag">🇵🇪</tspan> Peru</text>
+          </g>
+          <g class="intl-arrow" data-hub="La Paz" data-country="Europe" data-status="normal" data-flights="OB 854 → Madrid">
+            <line class="intl-halo" x1="80.0" y1="300.0" x2="20.0" y2="228.5"/>
+            <line class="fl-edge intl normal" x1="80.0" y1="300.0" x2="20.0" y2="228.5"/>
+            <path class="intl-head normal" d="M 20.0 228.5 L 29.4 231.9 L 21.7 238.3 Z"/>
+            <text class="intl-tag" x="8.0" y="233.5" text-anchor="end"><tspan class="intl-flag">🇪🇺</tspan> Europe</text>
+          </g>
         </g>
-        <g class="ap-node" data-name="Viru Viru (Santa Cruz)" data-status="open" data-note="Main international hub. Fully operational and reachable by road.">
-          <rect class="ap-dot open" x="454" y="445" width="10" height="10" transform="rotate(45 459 450)"/>
-          <text class="ap-lbl" x="469" y="453">Santa Cruz</text>
+        <g class="ap-node" data-name="Cobija" data-status="open" data-note="Aníbal Arab operational; Pando, far north.">
+          <rect class="ap-dot open" x="145" y="65" width="10" height="10" transform="rotate(45 150 70)"/>
+          <text class="ap-lbl" x="140" y="73" text-anchor="end">Cobija</text>
         </g>
-        <g class="ap-node" data-name="Alcantarí (Sucre)" data-status="open" data-note="Operational; Chuquisaca approach lighter than the altiplano.">
-          <rect class="ap-dot open" x="326" y="527" width="10" height="10" transform="rotate(45 331 532)"/>
-          <text class="ap-lbl" x="341" y="535">Sucre</text>
+        <g class="ap-node" data-name="Trinidad" data-status="open" data-note="Jorge Henrich operational; Beni.">
+          <rect class="ap-dot open" x="295" y="145" width="10" height="10" transform="rotate(45 300 150)"/>
+          <text class="ap-lbl" x="310" y="153">Trinidad</text>
         </g>
-        <g class="ap-node" data-name="Oriel Lea Plaza (Tarija)" data-status="open" data-note="Operational; Tarija region has no road blockades.">
-          <rect class="ap-dot open" x="355" y="646" width="10" height="10" transform="rotate(45 360 651)"/>
-          <text class="ap-lbl" x="370" y="654">Tarija</text>
+        <g class="ap-node" data-name="La Paz" data-status="partial" data-note="El Alto: flights operate but access road blockaded on/off; allow large buffers.">
+          <rect class="ap-dot partial" x="75" y="295" width="10" height="10" transform="rotate(45 80 300)"/>
+          <text class="ap-lbl" x="70" y="303" text-anchor="end">La Paz</text>
         </g>
-        <g class="ap-node" data-name="Joya Andina (Uyuni)" data-status="open" data-note="Operational; gateway to the salt flats.">
-          <rect class="ap-dot open" x="218" y="589" width="10" height="10" transform="rotate(45 223 594)"/>
-          <text class="ap-lbl" x="233" y="597">Uyuni</text>
+        <g class="ap-node" data-name="Cochabamba" data-status="partial" data-note="Jorge Wilstermann operational; city ringed by heavy blockades.">
+          <rect class="ap-dot partial" x="245" y="325" width="10" height="10" transform="rotate(45 250 330)"/>
+          <text class="ap-lbl" x="260" y="333">Cochabamba</text>
         </g>
-        <g class="ap-node" data-name="Jorge Henrich (Trinidad)" data-status="open" data-note="Operational; Beni (declared a humanitarian emergency, but airport runs).">
-          <rect class="ap-dot open" x="341" y="299" width="10" height="10" transform="rotate(45 346 304)"/>
-          <text class="ap-lbl" x="356" y="307">Trinidad</text>
+        <g class="ap-node" data-name="Oruro" data-status="isolated" data-note="Minor airfield; city road-isolated.">
+          <rect class="ap-dot isolated" x="75" y="425" width="10" height="10" transform="rotate(45 80 430)"/>
+          <text class="ap-lbl" x="70" y="433" text-anchor="end">Oruro</text>
         </g>
-        <g class="ap-node" data-name="Aníbal Arab (Cobija)" data-status="open" data-note="Operational; Pando, far north.">
-          <rect class="ap-dot open" x="94" y="104" width="10" height="10" transform="rotate(45 99 109)"/>
-          <text class="ap-lbl" x="89" y="112" text-anchor="end">Cobija</text>
+        <g class="ap-node" data-name="Uyuni" data-status="open" data-note="Joya Andina operational; salt-flats gateway.">
+          <rect class="ap-dot open" x="145" y="515" width="10" height="10" transform="rotate(45 150 520)"/>
+          <text class="ap-lbl" x="140" y="523" text-anchor="end">Uyuni</text>
         </g>
-        <g class="ap-node" data-name="Juan Mendoza (Oruro)" data-status="isolated" data-note="Minor airport; Oruro is heavily road-blocked, so effectively reachable only by air.">
-          <rect class="ap-dot isolated" x="203" y="461" width="10" height="10" transform="rotate(45 208 466)"/>
-          <text class="ap-lbl" x="198" y="469" text-anchor="end">Oruro</text>
+        <g class="ap-node" data-name="Potosí" data-status="isolated" data-note="Minor airfield; approaches heavily cut.">
+          <rect class="ap-dot isolated" x="295" y="495" width="10" height="10" transform="rotate(45 300 500)"/>
+          <text class="ap-lbl" x="310" y="503">Potosí</text>
         </g>
-        <g class="ap-node" data-name="Nicolás Rojas (Potosí)" data-status="isolated" data-note="Minor airport; Potosí approaches heavily cut.">
-          <rect class="ap-dot isolated" x="289" y="542" width="10" height="10" transform="rotate(45 294 547)"/>
-          <text class="ap-lbl" x="304" y="550">Potosí</text>
+        <g class="ap-node" data-name="Sucre" data-status="open" data-note="Alcantarí operational; lighter Chuquisaca approach.">
+          <rect class="ap-dot open" x="375" y="415" width="10" height="10" transform="rotate(45 380 420)"/>
+          <text class="ap-lbl" x="390" y="423">Sucre</text>
+        </g>
+        <g class="ap-node" data-name="Santa Cruz" data-status="open" data-note="Viru Viru — main hub, fully operational and road-accessible.">
+          <rect class="ap-dot open" x="465" y="295" width="10" height="10" transform="rotate(45 470 300)"/>
+          <text class="ap-lbl" x="480" y="303">Santa Cruz</text>
+        </g>
+        <g class="ap-node" data-name="Tarija" data-status="open" data-note="Oriel Lea Plaza operational; clear region.">
+          <rect class="ap-dot open" x="355" y="560" width="10" height="10" transform="rotate(45 360 565)"/>
+          <text class="ap-lbl" x="370" y="568">Tarija</text>
         </g>
       </svg>
     </div>
     <div class="ap-detail" id="apDetail" style="display:none"></div>
     <div class="ap-note">
-      <b>The key point for travellers:</b> Bolivian airspace and the airports themselves are operating — it is the <i>roads to them</i> that are the problem. Flying between cities is the only reliable way to move around the country right now. The catch is the access road: <b>El Alto (La Paz)</b> has repeatedly been blockaded, forcing passengers to walk the final kilometres on foot, so allow large time buffers there. <b>Viru Viru (Santa Cruz)</b> is the most dependable hub. Oruro and Potosí have airports but are minor and effectively reachable only by air given the surrounding blockades. Always reconfirm both your flight <i>and</i> the airport access road the same day you travel.
+      <b>The key point for travellers:</b> Bolivian airspace and the airports themselves are operating — it is the <i>roads to them</i> that are the problem, so flying is the only reliable way to move around the country right now. <b>This map is a schematic:</b> airport positions are arranged for clarity, not true geography. Green lines are flights operating normally, orange are running but delayed, and bold red are suspended or cancelled. The blue lines that run off the edge of the map are <b>international</b> routes, labelled with the destination country's flag — Brazil, the USA (Miami/Washington), Europe (Madrid), Argentina and Peru, mostly via <b>Santa Cruz (Viru Viru)</b>, which is the most dependable hub. <b>El Alto (La Paz)</b> is flying but flagged for delays. Tap any line for flight numbers, and always reconfirm directly with the airline: in the current climate, schedules change at short notice.
     </div>
   </div>
 
@@ -1672,6 +1765,40 @@
         detail.innerHTML='<div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><span style="width:11px;height:11px;transform:rotate(45deg);display:inline-block;background:'+col[st]+'"></span><b style="color:var(--text);font-size:13px">'+name+'</b><span style="font-family:ui-monospace,monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:'+col[st]+'">'+word[st]+'</span></div><div style="margin-top:6px;font-size:11.5px;color:var(--text-dim);line-height:1.55">'+note+'</div>';
       });
     });
+
+    // Flight lines: tap to show flight numbers
+    const flWord = {normal:"Normal operations",delays:"Delays reported",none:"No / cancelled service"};
+    const flCol  = {normal:"#22c55e",delays:"#f97316",none:"#ff3b3b"};
+    const intlCol = {normal:"#38bdf8",delays:"#fb923c",none:"#ff3b3b"};
+    const flLines = svg.querySelectorAll(".ap-flights .fl-edge");
+    function clearHot(){ flLines.forEach(l=>l.classList.remove("fl-hot","fl-dim")); }
+    function showFlight(a,b,st,flights,note){
+      flLines.forEach(l=>{
+        const on=(l.dataset.a===a&&l.dataset.b===b);
+        l.classList.toggle("fl-hot",on); l.classList.toggle("fl-dim",!on);
+      });
+      detail.style.display="block";
+      const fl = flights ? flights.split(" · ").map(f=>'<span style="display:inline-block;background:#1a1a1d;border:1px solid var(--border2);border-radius:4px;padding:2px 8px;margin:2px 4px 2px 0;font-family:ui-monospace,monospace;font-size:11px;color:#cbd5e1">'+f+'</span>').join('') : '<span style="color:var(--text-muted);font-style:italic;font-size:11.5px">No scheduled flight numbers — verify directly with the airline.</span>';
+      detail.innerHTML='<div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><span style="width:18px;height:0;border-top:3px solid '+flCol[st]+';display:inline-block;margin-bottom:4px"></span><b style="color:var(--text);font-size:13px">'+a+' ↔ '+b+'</b><span style="font-family:ui-monospace,monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:'+flCol[st]+'">'+flWord[st]+'</span></div>'+(note?'<div style="margin-top:5px;font-size:11px;color:var(--text-muted);line-height:1.5">'+note+'</div>':'')+'<div style="margin-top:7px">'+fl+'</div>';
+    }
+    flLines.forEach(l=>{
+      l.addEventListener("click",ev=>{
+        ev.stopPropagation();
+        showFlight(l.dataset.a,l.dataset.b,l.dataset.status,l.dataset.flights,l.dataset.note);
+      });
+    });
+    // International arrows: tap to show intl flights
+    svg.querySelectorAll(".intl-arrow").forEach(g=>{
+      g.addEventListener("click",ev=>{
+        ev.stopPropagation();
+        clearHot();
+        const hub=g.dataset.hub, country=g.dataset.country, st=g.dataset.status, flights=g.dataset.flights;
+        detail.style.display="block";
+        const fl = flights ? flights.split(" · ").map(f=>'<span style="display:inline-block;background:#1a1a1d;border:1px solid var(--border2);border-radius:4px;padding:2px 8px;margin:2px 4px 2px 0;font-family:ui-monospace,monospace;font-size:11px;color:#cbd5e1">'+f+'</span>').join('') : '';
+        detail.innerHTML='<div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><b style="color:var(--text);font-size:13px">'+hub+' → '+country+' ✈</b><span style="font-family:ui-monospace,monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:'+intlCol[st]+'">'+flWord[st]+' · international</span></div><div style="margin-top:7px">'+fl+'</div>';
+      });
+    });
+    svg.addEventListener("click",()=>clearHot());
   })();
 </script>
 
