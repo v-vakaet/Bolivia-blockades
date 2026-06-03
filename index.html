@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bolivia Crisis Monitor — 1 June 2026</title>
+<title>Bolivia Crisis Monitor — 3 June 2026</title>
 <!-- No external dependencies: uses system fonts so the page loads instantly and works fully offline. -->
 <style>
   :root {
@@ -435,7 +435,7 @@
     overflow: hidden;
   }
   .status-box::before {
-    content: 'SITUATIONAL ASSESSMENT — 26 MAY 2026';
+    content: 'SITUATIONAL ASSESSMENT — 3 JUNE 2026';
     display: block;
     font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace;
     font-size: 9px;
@@ -486,7 +486,7 @@
     overflow: hidden;
   }
   .decision-box::before {
-    content: '⚑ GUIDANCE FOR TRAVELLERS CURRENTLY IN BOLIVIA — 30 MAY 2026';
+    content: '⚑ GUIDANCE FOR TRAVELLERS CURRENTLY IN BOLIVIA — 3 JUNE 2026';
     display: block;
     font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace;
     font-size: 9px;
@@ -718,16 +718,16 @@
   .fl-edge.fl-dim { opacity: 0.1; }
   /* international flights: distinct double-stroke (halo) + brighter, leaves the map */
   .intl-halo { stroke: #0a0a0b; stroke-width: 8; fill: none; }
-  .fl-edge.intl.normal { stroke: #38bdf8; stroke-width: 3.2; }
+  .fl-edge.intl.normal { stroke: #22c55e; stroke-width: 3.2; }
   .fl-edge.intl.delays { stroke: #fb923c; stroke-width: 3.2; stroke-dasharray: 11 6; }
   .fl-edge.intl.none   { stroke: #ff3b3b; stroke-width: 3.2; stroke-dasharray: 12 7; }
-  .intl-head.normal { fill: #38bdf8; }
+  .intl-head.normal { fill: #22c55e; }
   .intl-head.delays { fill: #fb923c; }
   .intl-head.none { fill: #ff3b3b; }
   .intl-arrow { cursor: pointer; }
   .intl-tag {
     font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace;
-    font-size: 13px; font-weight: 700; fill: #e0f2fe;
+    font-size: 13px; font-weight: 700; fill: #e8e8ee;
   }
   .intl-flag { font-size: 15px; }
   .fl-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: flex-start; margin: 12px 0 0; background: var(--surface2); border: 1px solid var(--border); padding: 12px 16px; }
@@ -736,7 +736,7 @@
   .fl-key.normal { border-top: 3px solid #22c55e; }
   .fl-key.delays { border-top: 3px dashed #f97316; }
   .fl-key.none { border-top: 4px dashed #ff3b3b; }
-  .fl-key.intl { border-top: 3px solid #38bdf8; }
+  .fl-key.intl { border-top: 3px solid #22c55e; }
   .fl-row b { color: var(--text); font-weight: 600; }
   .ap-lbl { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace; font-size: 10px; fill: var(--text); pointer-events: none; font-weight: 500; }
   .ap-note { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--blue); padding: 11px 14px; margin-top: 12px; font-size: 11.5px; color: var(--text-dim); line-height: 1.6; }
@@ -807,14 +807,14 @@
 <header class="header">
   <div>
     <div class="header-title"><span class="country">BOLIVIA</span> — CRISIS MONITOR</div>
-    <div class="header-meta">SOURCE: ABC / RED UNO / EL DEBER / EFE / INFOBAE / LA RAZÓN / LA PATRIA · COMPILED 1 JUNE 2026</div>
+    <div class="header-meta">SOURCE: ABC / RED UNO / EL DEBER / EFE / INFOBAE / LA RAZÓN / LA PATRIA · COMPILED 3 JUNE 2026</div>
   </div>
   <div class="header-right">
     <div>
       <div class="alert-pill">⚠ ALERT LEVEL: CRITICAL</div>
     </div>
     <div class="day-counter">
-      DAY 32
+      DAY 34
       <span>of protests</span>
     </div>
   </div>
@@ -824,7 +824,7 @@
 
   <!-- LAST UPDATED — edit this stamp by hand each update -->
   <div class="updated-banner">
-    <span class="ub-stamp">Last updated: 1 June 2026, 09:00 BOT (Bolivia time)</span>
+    <span class="ub-stamp">Last updated: 3 June 2026, 09:00 BOT (Bolivia time)</span>
     <span class="ub-note">This is a snapshot. Road and border conditions change daily — always verify locally before travelling.</span>
   </div>
 
@@ -833,24 +833,24 @@
     <div class="sec-label">Current Situation</div>
     <div class="metrics-grid">
       <div class="metric-card mc-red">
-        <div class="metric-num">89</div>
+        <div class="metric-num">~90</div>
         <div class="metric-label">Active Blockades</div>
-        <div class="metric-sub">ABC 31 May · 6 departments · La Paz &amp; El Alto worst hit</div>
+        <div class="metric-sub">ABC 1 Jun · 7 departments · La Paz dept the most (~20)</div>
       </div>
       <div class="metric-card mc-amber">
-        <div class="metric-num">5+</div>
+        <div class="metric-num">9</div>
         <div class="metric-label">Deaths Attributed</div>
-        <div class="metric-sub">blood reserves "at the limit" · El Alto losing $6.5M/day</div>
+        <div class="metric-sub">six from blocked medical access (EFE) · La Paz declares 90-day health emergency</div>
       </div>
       <div class="metric-card mc-red">
-        <div class="metric-num" style="font-size:26px;">DIALOGUE<br>REJECTED</div>
-        <div class="metric-label">COB Assembly · 31 May</div>
-        <div class="metric-sub">voted to keep blockades despite warrants being lifted</div>
+        <div class="metric-num" style="font-size:26px;">RESIGN<br>DEMAND</div>
+        <div class="metric-label">El Alto Cabildo · 2 Jun</div>
+        <div class="metric-sub">COB &amp; neighbourhood federations: blockades until Paz quits</div>
       </div>
       <div class="metric-card mc-amber">
-        <div class="metric-num" style="font-size:24px;">HUM.<br>CORRIDORS</div>
-        <div class="metric-label">Sole Concession</div>
-        <div class="metric-sub">COB to allow medicine, food, ambulances through</div>
+        <div class="metric-num" style="font-size:26px;">"TRUCE"<br>OFFERED</div>
+        <div class="metric-label">President Paz · 1 Jun</div>
+        <div class="metric-sub">urges "democratic maturity"; weighs state of exception · 3 ministers offer to resign</div>
       </div>
     </div>
   </div>
@@ -914,40 +914,40 @@
             <text x="28" y="60.5" class="cx-yl">75</text>
             <line x1="34" y1="14.0" x2="370" y2="14.0" class="cx-grid"/>
             <text x="28" y="17.0" class="cx-yl">100</text>
-            <rect x="43.6" y="80.1" width="28.8" height="107.9" class="cx-bar" rx="1.5"/>
-            <text x="58.0" y="76.1" class="cx-val">62</text>
-            <text x="58.0" y="202.0" class="cx-xl">Tue 26</text>
-            <text x="58.0" y="213.0" class="cx-xl2">May 26</text>
-            <rect x="91.6" y="73.2" width="28.8" height="114.8" class="cx-bar" rx="1.5"/>
-            <text x="106.0" y="69.2" class="cx-val">66</text>
-            <text x="106.0" y="202.0" class="cx-xl">Wed 27</text>
-            <text x="106.0" y="213.0" class="cx-xl2">May 27</text>
-            <rect x="139.6" y="76.6" width="28.8" height="111.4" class="cx-bar" rx="1.5"/>
-            <text x="154.0" y="72.6" class="cx-val">64</text>
-            <text x="154.0" y="202.0" class="cx-xl">Thu 28</text>
-            <text x="154.0" y="213.0" class="cx-xl2">May 28</text>
-            <rect x="187.6" y="55.8" width="28.8" height="132.2" class="cx-bar" rx="1.5"/>
-            <text x="202.0" y="51.8" class="cx-val">76</text>
-            <text x="202.0" y="202.0" class="cx-xl">Fri 29</text>
-            <text x="202.0" y="213.0" class="cx-xl2">May 29</text>
-            <rect x="235.6" y="26.2" width="28.8" height="161.8" class="cx-bar peak" rx="1.5"/>
-            <text x="250.0" y="22.2" class="cx-val peak">93</text>
-            <text x="250.0" y="202.0" class="cx-xl">Sat 30</text>
-            <text x="250.0" y="213.0" class="cx-xl2">May 30</text>
-            <rect x="283.6" y="33.1" width="28.8" height="154.9" class="cx-bar" rx="1.5"/>
-            <text x="298.0" y="29.1" class="cx-val">89</text>
-            <text x="298.0" y="202.0" class="cx-xl">Sun 31</text>
-            <text x="298.0" y="213.0" class="cx-xl2">May 31</text>
-            <rect x="331.6" y="33.1" width="28.8" height="154.9" class="cx-bar" rx="1.5"/>
-            <text x="346.0" y="29.1" class="cx-val">89</text>
-            <text x="346.0" y="202.0" class="cx-xl">Mon 1</text>
-            <text x="346.0" y="213.0" class="cx-xl2">Jun 1</text>
+            <rect x="43.6" y="76.6" width="28.8" height="111.4" class="cx-bar" rx="1.5"/>
+            <text x="58.0" y="72.6" class="cx-val">64</text>
+            <text x="58.0" y="202.0" class="cx-xl">Thu 28</text>
+            <text x="58.0" y="213.0" class="cx-xl2">May 28</text>
+            <rect x="91.6" y="55.8" width="28.8" height="132.2" class="cx-bar" rx="1.5"/>
+            <text x="106.0" y="51.8" class="cx-val">76</text>
+            <text x="106.0" y="202.0" class="cx-xl">Fri 29</text>
+            <text x="106.0" y="213.0" class="cx-xl2">May 29</text>
+            <rect x="139.6" y="26.2" width="28.8" height="161.8" class="cx-bar peak" rx="1.5"/>
+            <text x="154.0" y="22.2" class="cx-val peak">93</text>
+            <text x="154.0" y="202.0" class="cx-xl">Sat 30</text>
+            <text x="154.0" y="213.0" class="cx-xl2">May 30</text>
+            <rect x="187.6" y="33.1" width="28.8" height="154.9" class="cx-bar" rx="1.5"/>
+            <text x="202.0" y="29.1" class="cx-val">89</text>
+            <text x="202.0" y="202.0" class="cx-xl">Sun 31</text>
+            <text x="202.0" y="213.0" class="cx-xl2">May 31</text>
+            <rect x="235.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
+            <text x="250.0" y="27.4" class="cx-val">90</text>
+            <text x="250.0" y="202.0" class="cx-xl">Mon 1</text>
+            <text x="250.0" y="213.0" class="cx-xl2">Jun 1</text>
+            <rect x="283.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
+            <text x="298.0" y="27.4" class="cx-val">90</text>
+            <text x="298.0" y="202.0" class="cx-xl">Tue 2</text>
+            <text x="298.0" y="213.0" class="cx-xl2">Jun 2</text>
+            <rect x="331.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
+            <text x="346.0" y="27.4" class="cx-val">90</text>
+            <text x="346.0" y="202.0" class="cx-xl">Wed 3</text>
+            <text x="346.0" y="213.0" class="cx-xl2">Jun 3</text>
           </svg>
         </div>
 
       </div>
       <div class="chart-note">
-        <b>Reading these together:</b> the weekly chart (left) shows the month-long climb from ~21 to a peak of 93; the daily chart (right) zooms into the last week — the count peaked at 93 on May 30, then eased slightly to 89 as the COB announced "humanitarian corridors," but it has not fallen meaningfully and dialogue was rejected on May 31. Both axes are blockade counts (0–100). Figures are ABC national-road-network reports; local/municipal blockades are not included.
+        <b>Reading these together:</b> the weekly chart (left) shows the month-long climb from ~21 to a peak of 93; the daily chart (right) zooms into the last week — the count peaked at 93 on 30 May, eased slightly, and has since held flat around 90 with no sign of easing. Dialogue was rejected on 31 May and a 2 June cabildo reaffirmed the blockades. Both axes are blockade counts (0–100). Figures are ABC national-road-network reports; local/municipal blockades are not included.
       </div>
     </div>
   </div>
@@ -1153,7 +1153,7 @@
       <div class="fl-row"><span class="fl-key normal"></span><span><b>Normal operations</b> (green)</span></div>
       <div class="fl-row"><span class="fl-key delays"></span><span><b>Delays recently</b> (dashed orange)</span></div>
       <div class="fl-row"><span class="fl-key none"></span><span><b>No / cancelled service</b> (bold red)</span></div>
-      <div class="fl-row"><span class="fl-key intl"></span><span><b>International</b> (blue, exits the map ✈)</span></div>
+      <div class="fl-row"><span class="fl-key intl"></span><span><b>International</b> (exits the map ✈, with flag)</span></div>
       <div class="fl-row" style="color:var(--text-muted);font-size:10px;">Schematic layout — positions simplified for clarity, not geographic. Tap any line for flight numbers.</div>
     </div>
     <div class="ap-card">
@@ -1258,7 +1258,7 @@
     </div>
     <div class="ap-detail" id="apDetail" style="display:none"></div>
     <div class="ap-note">
-      <b>The key point for travellers:</b> Bolivian airspace and the airports themselves are operating — it is the <i>roads to them</i> that are the problem, so flying is the only reliable way to move around the country right now. <b>This map is a schematic:</b> airport positions are arranged for clarity, not true geography. Green lines are flights operating normally, orange are running but delayed, and bold red are suspended or cancelled. The blue lines that run off the edge of the map are <b>international</b> routes, labelled with the destination country's flag — Brazil, the USA (Miami/Washington), Europe (Madrid), Argentina and Peru, mostly via <b>Santa Cruz (Viru Viru)</b>, which is the most dependable hub. <b>El Alto (La Paz)</b> is flying but flagged for delays. Tap any line for flight numbers, and always reconfirm directly with the airline: in the current climate, schedules change at short notice.
+      <b>The key point for travellers:</b> Bolivian airspace and the airports themselves are operating — it is the <i>roads to them</i> that are the problem, so flying is the only reliable way to move around the country right now. <b>This map is a schematic:</b> airport positions are arranged for clarity, not true geography. Green lines are flights operating normally, orange are running but delayed, and bold red are suspended or cancelled. The lines that run off the edge of the map, ending in an arrow with a destination flag, are <b>international</b> routes — Brazil, the USA (Miami/Washington), Europe (Madrid), Argentina and Peru, mostly via <b>Santa Cruz (Viru Viru)</b>, which is the most dependable hub. <b>El Alto (La Paz)</b> is flying but flagged for delays. Tap any line for flight numbers, and always reconfirm directly with the airline: in the current climate, schedules change at short notice.
     </div>
   </div>
 
@@ -1468,7 +1468,17 @@
       <div class="log-row" style="background: #0f0d00; border-left: 2px solid var(--amber);">
         <div class="log-date">Jun 1, 2026</div>
         <div><span class="log-tag lt-spread">DAY 32</span></div>
-        <div class="log-desc"><b>Blockades hold at ~89 points</b> across the same six departments as the crisis enters its second month with no negotiation in prospect. Attention turns to whether the government will invoke the military-deployment law it passed on May 27. Humanitarian corridors are reported functioning unevenly. <span class="hi-a">For travellers, the practical situation is unchanged: the altiplano remains impassable by road and air travel is the only reliable option.</span></div>
+        <div class="log-desc"><b>Blockades hold at ~90 points</b> across seven departments as the crisis enters its second month with no negotiation in prospect. <b>President Paz declares a "truce"</b> and asks the movement for "democratic maturity," while saying a state of exception with the military remains a last resort. Humanitarian corridors are reported functioning unevenly. <span class="hi-a">For travellers, the practical situation is unchanged: the altiplano remains impassable by road and air travel is the only reliable option.</span></div>
+      </div>
+      <div class="log-row" style="background: #100600; border-left: 2px solid var(--red);">
+        <div class="log-date">Jun 2, 2026</div>
+        <div><span class="log-tag lt-violence">CABILDO</span></div>
+        <div class="log-desc"><b>A multi-sector cabildo in El Alto reaffirms the blockades until Paz resigns.</b> Convened by the COB and the neighbourhood federations (Fejuve), it set aside earlier sector-specific demands to focus solely on the president's departure. <span class="hi-red">The La Paz governorate declared a 90-day health and humanitarian emergency</span> over shortages of medicine, oxygen, food and fuel. A revocatory-referendum idea floated by some legislators was dismissed as constitutionally impossible — Paz has been in office only six months.</div>
+      </div>
+      <div class="log-row" style="background: #0f0d00; border-left: 2px solid var(--amber);">
+        <div class="log-date">Jun 3, 2026</div>
+        <div><span class="log-tag lt-spread">DAY 34</span></div>
+        <div class="log-desc"><b>Three cabinet ministers put their resignations at the president's disposal</b> as the political pressure on the government mounts. The death toll attributed to the crisis is now reported at <b>nine</b>, six of them people who could not reach medical care because of the blockades. The transport confederation's 48-hour ultimatum to clear the roads expires 4 June. <span class="hi-a">No change for travellers: highland road travel remains off-limits; fly and reconfirm same-day.</span></div>
       </div>
     </div>
   </div>
@@ -1593,19 +1603,19 @@
     </div>
 
     <div class="dec-verdict">
-      <b>General guidance (1 June):</b> Air travel remains the only reliable way to move between regions, and all major airports are operating — though airport <i>access roads</i>, especially in La Paz, can be disrupted. <span class="go">Treat Santa Cruz and the eastern lowlands as the safe anchor</span> and <span class="nogo">treat the La Paz–Oruro–Cochabamba altiplano as off-limits by road.</span> The COB rejected dialogue on May 31 and the blockades continue around 89 points with no agreement in sight — so no traveller should build plans around near-term improvement, and a forced clearance could raise tensions further. The single most important rule: <b>do not attempt long-distance road travel through the highlands</b>, and reconfirm any flight and airport-access status the same day you travel. Register with your embassy or consulate so you receive official alerts directly.
+      <b>General guidance (3 June):</b> Air travel remains the only reliable way to move between regions, and all major airports are operating — though airport <i>access roads</i>, especially in La Paz, can be disrupted. <span class="go">Treat Santa Cruz and the eastern lowlands as the safe anchor</span> and <span class="nogo">treat the La Paz–Oruro–Cochabamba altiplano as off-limits by road.</span> The COB rejected dialogue on 31 May and a 2 June cabildo reaffirmed the blockades (~90 points) with no agreement in sight — so no traveller should build plans around near-term improvement, and a forced clearance could raise tensions further. The single most important rule: <b>do not attempt long-distance road travel through the highlands</b>, and reconfirm any flight and airport-access status the same day you travel. Register with your embassy or consulate so you receive official alerts directly.
     </div>
   </div>
 
   <div class="status-box">
     <div class="status-para">
-      <b>Trajectory:</b> <span class="hi-r">the diplomatic opening has closed and the stand-off has hardened.</span> After peaking at a record 93 blockades on May 30, the count has held around 89. Crucially, although the courts lifted the arrest warrants against the protest leaders on May 29 — removing their stated precondition — the COB assembly on May 31 still <span class="hi-r">rejected dialogue outright and voted to maintain the blockades until President Paz resigns.</span> The government's negotiating table was suspended indefinitely.
+      <b>Trajectory:</b> <span class="hi-r">the stand-off has hardened and is now openly about Paz's survival.</span> After peaking at a record 93 blockades on 30 May, the count has held flat around 90 across seven departments. The COB rejected dialogue on 31 May, and a 2 June cabildo in El Alto reaffirmed that the blockades continue <span class="hi-r">until the president resigns</span> — explicitly dropping sector demands in favour of that single goal. On 3 June three ministers offered to resign, a sign of strain inside the government.
     </div>
     <div class="status-para">
-      <b>What comes next:</b> with negotiation rejected, the two plausible paths are (1) the blockades grind on, deepening the food, fuel, oxygen and medicine shortages until economic exhaustion forces someone to move, or (2) Paz invokes the military-deployment law he passed on May 27 and attempts to clear routes by force. <span class="hi-r">The second path risks a sharp, possibly violent escalation</span> — and two earlier clearing operations already failed. The one humane development is the COB's pledge of "humanitarian corridors" for medicine, food and ambulances, though reports say these function unevenly.
+      <b>What comes next:</b> with negotiation rejected and the demand narrowed to resignation, the plausible paths are (1) the blockades grind on, deepening the food, fuel, oxygen and medicine shortages until economic and political exhaustion forces a resolution, or (2) Paz invokes the military-deployment law he passed on 27 May and tries to clear routes by force. <span class="hi-r">The second path risks a sharp, possibly violent escalation</span> — and two earlier clearing operations already failed. Paz has instead called for a "truce" and "democratic maturity," but the movement has shown no sign of standing down. "Humanitarian corridors" for medicine and ambulances are the one concession, and they function unevenly.
     </div>
     <div class="status-para">
-      <b>Humanitarian backdrop:</b> worsening regardless of the politics. Blood reserves are reported "at the limit," hospitals are short of oxygen and medicine, and El Alto alone is losing an estimated $6.5M per day. The longer this runs, the more the basic functioning of the country degrades.
+      <b>Humanitarian backdrop:</b> worsening regardless of the politics. The death toll attributed to the crisis is now reported at <span class="hi-r">nine, six of them people who could not reach medical care</span> because of the blockades. La Paz department has declared a 90-day health and humanitarian emergency; hospitals are short of oxygen and medicine, and basic goods in La Paz and El Alto have doubled or tripled in price where they can be found at all.
     </div>
     <div class="status-para">
       <b>For travellers:</b> <span class="hi-g">the eastern lowlands (Santa Cruz) and the far south (Tarija) remain the most navigable areas, and air travel between regions still functions.</span> <span class="hi-r">The La Paz–Oruro–Cochabamba altiplano is the danger zone and should not be crossed by road.</span> With no diplomatic breakthrough in sight, the prudent posture is to avoid highland road travel entirely, keep to regions with functioning airports, and reconfirm flights and airport access on the day of travel rather than relying on conditions reported even a few hours earlier.
@@ -1624,7 +1634,7 @@
 </div><!-- /container -->
 
 <footer class="footer">
-  <div>BOLIVIA CRISIS MONITOR · UPDATED 1 JUNE 2026 · TRAVEL SAFETY REFERENCE · NOT OFFICIAL ADVICE</div>
+  <div>BOLIVIA CRISIS MONITOR · UPDATED 3 JUNE 2026 · TRAVEL SAFETY REFERENCE · NOT OFFICIAL ADVICE</div>
   <div>LIVE ROAD STATUS → transitabilidad.abc.gob.bo · ALWAYS REGISTER WITH & CONTACT YOUR OWN EMBASSY OR CONSULATE</div>
 </footer>
 
@@ -1769,7 +1779,7 @@
     // Flight lines: tap to show flight numbers
     const flWord = {normal:"Normal operations",delays:"Delays reported",none:"No / cancelled service"};
     const flCol  = {normal:"#22c55e",delays:"#f97316",none:"#ff3b3b"};
-    const intlCol = {normal:"#38bdf8",delays:"#fb923c",none:"#ff3b3b"};
+    const intlCol = {normal:"#22c55e",delays:"#f97316",none:"#ff3b3b"};
     const flLines = svg.querySelectorAll(".ap-flights .fl-edge");
     function clearHot(){ flLines.forEach(l=>l.classList.remove("fl-hot","fl-dim")); }
     function showFlight(a,b,st,flights,note){
