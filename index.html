@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bolivia Crisis Monitor — 5 June 2026</title>
+<title>Bolivia Crisis Monitor — 6 June 2026</title>
 <!-- No external dependencies: uses system fonts so the page loads instantly and works fully offline. -->
 <style>
   :root {
@@ -237,76 +237,6 @@
     .charts-grid { grid-template-columns: 1fr; gap: 20px; }
   }
 
-  /* ─── WEEK TIMELINE ──────────────────────────────────── */
-  .week-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  .week-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .wk-header {
-    padding: 10px 12px 8px;
-    border-bottom: 1px solid var(--border);
-  }
-  .wk-num {
-    font-family: 'Arial Narrow', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-  }
-  .wk-dates {
-    font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace;
-    font-size: 9px;
-    color: var(--text-muted);
-    margin-top: 1px;
-  }
-  .wk-peak {
-    font-family: 'Arial Narrow', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 1;
-    margin-top: 4px;
-  }
-  .wk-peak-label { font-size: 9px; font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace; color: var(--text-muted); font-weight: 400; display: block; }
-
-  .wk-sev {
-    height: 3px;
-    width: 100%;
-  }
-  .wks1 { background: #f59e0b; width: 30%; }
-  .wks2 { background: #f97316; width: 60%; }
-  .wks3 { background: #ef4444; width: 85%; }
-  .wks4 { background: var(--red); width: 100%; animation: flicker 1.4s ease-in-out infinite; }
-  @keyframes flicker { 0%,100%{opacity:1} 50%{opacity:0.4} }
-
-  .wk-body {
-    padding: 10px 12px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .wk-evt {
-    font-size: 11px;
-    line-height: 1.4;
-    color: var(--text-dim);
-    padding-left: 10px;
-    position: relative;
-  }
-  .wk-evt::before { content:'›'; position:absolute; left:0; color: var(--text-muted); }
-  .wk-evt.e-death  { color: var(--red); }
-  .wk-evt.e-death::before  { color: var(--red); content:'†'; font-size: 12px; }
-  .wk-evt.e-warn   { color: var(--amber); }
-  .wk-evt.e-warn::before   { color: var(--amber); content:'!'; font-weight:700; font-size:11px; }
-
   /* ─── INCIDENT LOG ───────────────────────────────────── */
   .log-wrap {
     background: var(--surface);
@@ -435,7 +365,7 @@
     overflow: hidden;
   }
   .status-box::before {
-    content: 'SITUATIONAL ASSESSMENT — 5 JUNE 2026';
+    content: 'SITUATIONAL ASSESSMENT — 6 JUNE 2026';
     display: block;
     font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace;
     font-size: 9px;
@@ -486,7 +416,7 @@
     overflow: hidden;
   }
   .decision-box::before {
-    content: '⚑ GUIDANCE FOR TRAVELLERS CURRENTLY IN BOLIVIA — 5 JUNE 2026';
+    content: '⚑ GUIDANCE FOR TRAVELLERS CURRENTLY IN BOLIVIA — 6 JUNE 2026';
     display: block;
     font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace;
     font-size: 9px;
@@ -788,7 +718,6 @@
   /* ─── RESPONSIVE ─────────────────────────────────────── */
   @media (max-width: 680px) {
     .metrics-grid  { grid-template-columns: 1fr 1fr; }
-    .week-grid     { grid-template-columns: 1fr 1fr; }
     .risk-split    { grid-template-columns: 1fr; }
     .log-row       { grid-template-columns: 72px 60px 1fr; }
     .metric-num    { font-size: 32px; }
@@ -807,14 +736,14 @@
 <header class="header">
   <div>
     <div class="header-title"><span class="country">BOLIVIA</span> — CRISIS MONITOR</div>
-    <div class="header-meta">SOURCE: ABC / RED UNO / EL DEBER / EFE / INFOBAE / LA RAZÓN / LA PATRIA · COMPILED 5 JUNE 2026</div>
+    <div class="header-meta">SOURCE: ABC / RED UNO / EL DEBER / EFE / INFOBAE / LA RAZÓN / LA PATRIA · COMPILED 6 JUNE 2026</div>
   </div>
   <div class="header-right">
     <div>
       <div class="alert-pill">⚠ ALERT LEVEL: CRITICAL</div>
     </div>
     <div class="day-counter">
-      DAY 36
+      DAY 37
       <span>of protests</span>
     </div>
   </div>
@@ -824,7 +753,7 @@
 
   <!-- LAST UPDATED — edit this stamp by hand each update -->
   <div class="updated-banner">
-    <span class="ub-stamp">Last updated: 5 June 2026, 09:00 BOT (Bolivia time)</span>
+    <span class="ub-stamp">Last updated: 6 June 2026, 09:00 BOT (Bolivia time)</span>
     <span class="ub-note">This is a snapshot. Road and border conditions change daily — always verify locally before travelling.</span>
   </div>
 
@@ -835,7 +764,7 @@
       <div class="metric-card mc-red">
         <div class="metric-num">~90</div>
         <div class="metric-label">Active Blockades</div>
-        <div class="metric-sub">7 departments · Cochabamba &amp; La Paz worst · Parotani bridge force-cleared 3 Jun</div>
+        <div class="metric-sub">7 departments · Cochabamba &amp; La Paz worst · La Paz besieged ~32 days</div>
       </div>
       <div class="metric-card mc-amber">
         <div class="metric-num">10</div>
@@ -844,13 +773,13 @@
       </div>
       <div class="metric-card mc-red">
         <div class="metric-num" style="font-size:26px;">RESIGN<br>DEMAND</div>
-        <div class="metric-label">El Alto Cabildo · 2 Jun</div>
-        <div class="metric-sub">COB &amp; neighbourhood federations: blockades until Paz quits</div>
+        <div class="metric-label">Movement's sole demand</div>
+        <div class="metric-sub">COB &amp; campesino leaders reject all dialogue; blockades until Paz quits</div>
       </div>
       <div class="metric-card mc-amber">
-        <div class="metric-num" style="font-size:26px;">"TRUCE"<br>OFFERED</div>
-        <div class="metric-label">Force vs. Dialogue · 3 Jun</div>
-        <div class="metric-sub">500 police + 500 troops reopen a key route; Paz still offers "dialogue" alongside an exception bill</div>
+        <div class="metric-num" style="font-size:24px;">EXCEPTION<br>WEIGHED</div>
+        <div class="metric-label">President Paz · 5 Jun</div>
+        <div class="metric-sub">no longer rules out a state of exception; bill advancing in Congress · new Defence minister sworn in</div>
       </div>
     </div>
   </div>
@@ -914,34 +843,34 @@
             <text x="28" y="60.5" class="cx-yl">75</text>
             <line x1="34" y1="14.0" x2="370" y2="14.0" class="cx-grid"/>
             <text x="28" y="17.0" class="cx-yl">100</text>
-            <rect x="43.6" y="26.2" width="28.8" height="161.8" class="cx-bar peak" rx="1.5"/>
-            <text x="58.0" y="22.2" class="cx-val peak">93</text>
-            <text x="58.0" y="202.0" class="cx-xl">Sat 30</text>
-            <text x="58.0" y="213.0" class="cx-xl2">May 30</text>
-            <rect x="91.6" y="33.1" width="28.8" height="154.9" class="cx-bar" rx="1.5"/>
-            <text x="106.0" y="29.1" class="cx-val">89</text>
-            <text x="106.0" y="202.0" class="cx-xl">Sun 31</text>
-            <text x="106.0" y="213.0" class="cx-xl2">May 31</text>
-            <rect x="139.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
-            <text x="154.0" y="27.4" class="cx-val">90</text>
-            <text x="154.0" y="202.0" class="cx-xl">Mon 1</text>
-            <text x="154.0" y="213.0" class="cx-xl2">Jun 1</text>
-            <rect x="187.6" y="27.9" width="28.8" height="160.1" class="cx-bar" rx="1.5"/>
-            <text x="202.0" y="23.9" class="cx-val">92</text>
-            <text x="202.0" y="202.0" class="cx-xl">Tue 2</text>
-            <text x="202.0" y="213.0" class="cx-xl2">Jun 2</text>
-            <rect x="235.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
-            <text x="250.0" y="27.4" class="cx-val">90</text>
-            <text x="250.0" y="202.0" class="cx-xl">Wed 3</text>
-            <text x="250.0" y="213.0" class="cx-xl2">Jun 3</text>
-            <rect x="283.6" y="27.9" width="28.8" height="160.1" class="cx-bar" rx="1.5"/>
-            <text x="298.0" y="23.9" class="cx-val">92</text>
-            <text x="298.0" y="202.0" class="cx-xl">Thu 4</text>
-            <text x="298.0" y="213.0" class="cx-xl2">Jun 4</text>
-            <rect x="331.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
-            <text x="346.0" y="27.4" class="cx-val">90</text>
-            <text x="346.0" y="202.0" class="cx-xl">Fri 5</text>
-            <text x="346.0" y="213.0" class="cx-xl2">Jun 5</text>
+            <rect x="43.6" y="33.1" width="28.8" height="154.9" class="cx-bar" rx="1.5"/>
+            <text x="58.0" y="29.1" class="cx-val">89</text>
+            <text x="58.0" y="202.0" class="cx-xl">Sun 31</text>
+            <text x="58.0" y="213.0" class="cx-xl2">May 31</text>
+            <rect x="91.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
+            <text x="106.0" y="27.4" class="cx-val">90</text>
+            <text x="106.0" y="202.0" class="cx-xl">Mon 1</text>
+            <text x="106.0" y="213.0" class="cx-xl2">Jun 1</text>
+            <rect x="139.6" y="27.9" width="28.8" height="160.1" class="cx-bar peak" rx="1.5"/>
+            <text x="154.0" y="23.9" class="cx-val peak">92</text>
+            <text x="154.0" y="202.0" class="cx-xl">Tue 2</text>
+            <text x="154.0" y="213.0" class="cx-xl2">Jun 2</text>
+            <rect x="187.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
+            <text x="202.0" y="27.4" class="cx-val">90</text>
+            <text x="202.0" y="202.0" class="cx-xl">Wed 3</text>
+            <text x="202.0" y="213.0" class="cx-xl2">Jun 3</text>
+            <rect x="235.6" y="27.9" width="28.8" height="160.1" class="cx-bar peak" rx="1.5"/>
+            <text x="250.0" y="23.9" class="cx-val peak">92</text>
+            <text x="250.0" y="202.0" class="cx-xl">Thu 4</text>
+            <text x="250.0" y="213.0" class="cx-xl2">Jun 4</text>
+            <rect x="283.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
+            <text x="298.0" y="27.4" class="cx-val">90</text>
+            <text x="298.0" y="202.0" class="cx-xl">Fri 5</text>
+            <text x="298.0" y="213.0" class="cx-xl2">Jun 5</text>
+            <rect x="331.6" y="33.1" width="28.8" height="154.9" class="cx-bar" rx="1.5"/>
+            <text x="346.0" y="29.1" class="cx-val">89</text>
+            <text x="346.0" y="202.0" class="cx-xl">Sat 6</text>
+            <text x="346.0" y="213.0" class="cx-xl2">Jun 6</text>
           </svg>
         </div>
 
@@ -1262,85 +1191,6 @@
     </div>
   </div>
 
-  <!-- 4-WEEK TIMELINE -->
-  <div>
-    <div class="sec-label">Week-by-Week Breakdown</div>
-    <div class="week-grid">
-
-      <!-- Week 1 -->
-      <div class="week-card">
-        <div class="wk-header">
-          <div class="wk-num">Week 1</div>
-          <div class="wk-dates">May 1–7, 2026</div>
-          <div class="wk-peak" style="color: #f59e0b;">21 <span class="wk-peak-label">peak blockades</span></div>
-        </div>
-        <div class="wk-sev wks1"></div>
-        <div class="wk-body">
-          <div class="wk-evt">COB launches indefinite general strike (May 1)</div>
-          <div class="wk-evt">Demands: 20% wage rise, pension reform, fuel prices</div>
-          <div class="wk-evt">Transport syndicates join blockades in La Paz & El Alto</div>
-          <div class="wk-evt">Tupiza: 24-hr local transport strike (May 5)</div>
-          <div class="wk-evt">ABC reports first widespread road closures (May 6–7)</div>
-        </div>
-      </div>
-
-      <!-- Week 2 -->
-      <div class="week-card">
-        <div class="wk-header">
-          <div class="wk-num">Week 2</div>
-          <div class="wk-dates">May 8–14, 2026</div>
-          <div class="wk-peak" style="color: #f97316;">38 <span class="wk-peak-label">peak blockades</span></div>
-        </div>
-        <div class="wk-sev wks2"></div>
-        <div class="wk-body">
-          <div class="wk-evt e-death">Tourist Anna Enns (Belize, 56) dies at Desaguadero — ambulance blocked (May 13)</div>
-          <div class="wk-evt e-death">2nd woman dies, ambulance blocked near Guanay (May 13)</div>
-          <div class="wk-evt e-death">20-year-old dies, El Alto — 3h ambulance delay (May 14)</div>
-          <div class="wk-evt e-warn">US Embassy: "Do NOT travel by road between cities" (May 14)</div>
-          <div class="wk-evt">Govt repeals Ley 1720 — but demands shift to resignation</div>
-        </div>
-      </div>
-
-      <!-- Week 3 -->
-      <div class="week-card">
-        <div class="wk-header">
-          <div class="wk-num">Week 3</div>
-          <div class="wk-dates">May 15–21, 2026</div>
-          <div class="wk-peak" style="color: #ef4444;">47 <span class="wk-peak-label">peak blockades</span></div>
-        </div>
-        <div class="wk-sev wks3"></div>
-        <div class="wk-body">
-          <div class="wk-evt e-warn">Military "Corredor Humanitario" op: 2,500 police + 1,000 troops deployed (May 16)</div>
-          <div class="wk-evt e-warn">Banks close branches in La Paz (security risk, May 19)</div>
-          <div class="wk-evt e-warn">18 May — worst violence: explosives, police car burned, bystanders attacked</div>
-          <div class="wk-evt">15 journalists assaulted, 4 camera crews targeted (May 19)</div>
-          <div class="wk-evt e-death">12-year-old boy dies, ambulance blocked (May 21)</div>
-          <div class="wk-evt">Fuel & food shortages spreading in La Paz</div>
-        </div>
-      </div>
-
-      <!-- Week 4 -->
-      <div class="week-card w4-update">
-        <div class="wk-header">
-          <div class="wk-num">Week 4 ▲ UPDATED MAY 29</div>
-          <div class="wk-dates">May 22–29, 2026 (ongoing)</div>
-          <div class="wk-peak" style="color: var(--amber);">64 <span class="wk-peak-label">ABC May 28 · La Paz 22, Potosí 15, Cbba 11, Oruro 10, Chuq 3, SCZ 3 · peaked at 66 on May 27</span></div>
-        </div>
-        <div class="wk-sev wks4"></div>
-        <div class="wk-body">
-          <div class="wk-evt e-warn">Paz promulgates military law May 27. State of exception still NOT declared — govt calls it "one more instrument, evaluated by need" (May 28)</div>
-          <div class="wk-evt e-warn"><b style="color:var(--red)">2nd dialogue (May 28, Episcopal Conference) FAILED</b> — COB leader Argollo and Túpac Katari leader Salazar both no-show again, despite govt guarantees against arrest</div>
-          <div class="wk-evt e-warn">COB conditions attendance on cancelling arrest warrants; Argollo charged with "incitement and terrorism." Paz warns this was the invitation "for the last time"</div>
-          <div class="wk-evt e-warn">Protesters call a national <i>cabildo</i> (popular assembly) to decide whether to continue — outcome pending</div>
-          <div class="wk-evt e-death">Medical college: blood reserves "at the limit." El Alto losing $6.5M/day. Hospitals critically short of oxygen and medicine</div>
-          <div class="wk-evt"><b style="color:var(--amber)">Potosí remains 15 blockade points</b> — directly affects Tupiza–Uyuni corridor</div>
-          <div class="wk-evt">Public transport drivers begin own "indefinite strike" (2nd day May 28) over fuel compensation — separate grievance, adds to paralysis</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
   <!-- INCIDENT LOG -->
   <div>
     <div class="sec-label">Critical Incident Log</div>
@@ -1348,112 +1198,32 @@
       <div class="log-row">
         <div class="log-date">May 1, 2026</div>
         <div><span class="log-tag lt-spread">ESCALATION</span></div>
-        <div class="log-desc"><b>COB announces indefinite general strike.</b> Transport syndicates join immediately. Blockades begin in La Paz and El Alto perimeter. Demands are initially economic.</div>
+        <div class="log-desc"><b>COB announces an indefinite general strike</b> over economic demands; transport syndicates join and blockades begin around La Paz and El Alto. By 11 May the road authority counts ~38 blockade points across six departments, with hundreds of trucks stranded.</div>
       </div>
       <div class="log-row">
-        <div class="log-date">May 6, 2026</div>
-        <div><span class="log-tag lt-spread">SPREAD</span></div>
-        <div class="log-desc"><b>ABC (Road Authority) reports 21 blockades</b> on the national road network. La Paz–Oruro highway is now partially blocked at Patacamaya and Viacha.</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 11, 2026</div>
-        <div><span class="log-tag lt-spread">SPREAD</span></div>
-        <div class="log-desc"><b>38 blockade points</b> reported by ABI on 6 departments simultaneously. Routes to Boyuibe, San Julián and Abapó (Santa Cruz) blocked for first time. Hundreds of trucks stranded.</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 13, 2026</div>
-        <div><span class="log-tag lt-tourist">TOURIST</span></div>
-        <div class="log-desc"><b>Anna Enns, 56, tourist from Belize, dies at Desaguadero border.</b> <span class="hi-red">Ambulance blocked from reaching hospital.</span> This is the first confirmed tourist death directly attributed to the blockades.</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 13, 2026</div>
-        <div><span class="log-tag lt-death">DEATH ×2</span></div>
-        <div class="log-desc">Second woman (40) dies in ambulance near Guanay. Third victim (20-year-old, El Alto) reported day after. All three deaths caused by blocked emergency access. International outcry begins.</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 14, 2026</div>
-        <div><span class="log-tag lt-tourist">TOURIST</span></div>
-        <div class="log-desc"><b>U.S. Embassy Security Alert:</b> <span class="hi">"Do not travel by road between cities. Drivers attempting to pass roadblocks have reported <b>violence, physical assaults, and car damage</b>."</span> Tourism body confirms tourists stranded across the country. Daily sector losses exceed USD 720,000.</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 16, 2026</div>
-        <div><span class="log-tag lt-military">MILITARY</span></div>
-        <div class="log-desc">Government deploys <b>2,500 police + 1,000 troops</b> ("Corredor Humanitario" operation) to attempt to clear roads. Convoy makes partial progress but does not open La Paz–Oruro corridor fully.</div>
+        <div class="log-date">May 13–14, 2026</div>
+        <div><span class="log-tag lt-tourist">DEATHS · ALERT</span></div>
+        <div class="log-desc"><b>First deaths from blocked medical access,</b> including a tourist from Belize who died at the Desaguadero border when an ambulance could not get through. The <b>U.S. Embassy</b> warns against road travel between cities, citing <span class="hi-red">violence, physical assaults and vehicle damage</span> at roadblocks; tourists are stranded nationwide.</div>
       </div>
       <div class="log-row">
         <div class="log-date">May 18, 2026</div>
         <div><span class="log-tag lt-violence">VIOLENCE</span></div>
-        <div class="log-desc"><b>Most violent day of the crisis:</b> three converging marches clash with police in La Paz. <span class="hi-red">Homemade explosives used, police vehicle burned, cable car station attacked, public offices ransacked, bystanders physically assaulted.</span> Banks close branches citing security risks.</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 19, 2026</div>
-        <div><span class="log-tag lt-violence">PRESS</span></div>
-        <div class="log-desc"><b>15 journalists and 4 camera crews assaulted</b> within one week, per the Defensoría del Pueblo. YPFB halts fuel deliveries as its Senkata plant is blockaded. Food shortages begin in La Paz (meat, poultry).</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 21, 2026</div>
-        <div><span class="log-tag lt-death">DEATH</span></div>
-        <div class="log-desc"><b>4th death: 12-year-old boy</b> dies after ambulance is blocked for 3+ hours. Counter-protests begin: citizen marches in La Paz, Cochabamba, Santa Cruz, Trinidad demand pacification.</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 23, 2026</div>
-        <div><span class="log-tag lt-violence">VIOLENCE</span></div>
-        <div class="log-desc"><b>Second humanitarian convoy attacked.</b> 150-vehicle column (police, military, civilian trucks) pelted with stones and homemade explosives. Vehicles burned at Copata, Achica Arriba and Vilaque. <b>57 people detained.</b> Convoy forced to retreat.</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 24, 2026</div>
-        <div><span class="log-tag lt-spread">PEAK</span></div>
-        <div class="log-desc"><b>59 blockade points</b> — the highest count of the crisis, across 6 of 9 departments. Senate votes to repeal the State of Exception Law, limiting the government's tools for crisis response.</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 25, 2026</div>
-        <div><span class="log-tag lt-spread">W4 DAY 4</span></div>
-        <div class="log-desc">58 blockade points remain. <b>Protesters attempt to block access to El Alto international airport.</b> No dialogue achieved — planned meeting with campesino leaders cancelled after Sunday's convoy failure. Potosí–Tupiza road confirmed open by police (evening).</div>
-      </div>
-      <div class="log-row">
-        <div class="log-date">May 26, 2026</div>
-        <div><span class="log-tag lt-tourist">FIELD REPORT</span></div>
-        <div class="log-desc"><b>Potosí–Tupiza road reported blockaded around 00h30,</b> <span class="hi-red">contradicting the police report from the prior evening.</span> This illustrates the core problem: conditions change within hours and no official report can be fully trusted.</div>
+        <div class="log-desc"><b>The most violent day so far:</b> marches clash with police in La Paz with homemade explosives, a burned police vehicle and ransacked offices. Two humanitarian convoys to clear the La Paz–Oruro corridor are attacked and forced back over the following days. Food, fuel and medicine shortages take hold.</div>
       </div>
       <div class="log-row" style="background: #0f0d00; border-left: 2px solid var(--amber);">
-        <div class="log-date">May 26, 2026</div>
-        <div><span class="log-tag lt-spread">NEW PEAK</span></div>
-        <div class="log-desc"><b>62 blockade points</b> — new all-time high, per ABC. Up from 54 in 24 hours. Potosí: 10 specific blockades listed including Yocalla–Tarapaya (on Uyuni corridor). <b>Uyuni bus terminal confirms 3 consecutive weeks of partial service suspension.</b></div>
-      </div>
-      <div class="log-row" style="background: #0f0d00; border-left: 2px solid var(--amber);">
-        <div class="log-date">May 26–27, 2026</div>
-        <div><span class="log-tag lt-military">SIGNED</span></div>
-        <div class="log-desc"><b>President Paz signs and promulgates the abolition of Ley 1341</b> — published in the Gaceta Oficial hours after congressional passage. Military can now be deployed in civil conflicts without prior conditions. Government insists state of exception remains "last resort." Analysts warn the 2000 precedent shows such measures can <span class="hi-red">strengthen, not dissolve, protest movements</span>.</div>
-      </div>
-      <div class="log-row" style="background: #061206; border-left: 2px solid var(--green);">
-        <div class="log-date">May 27, 2026</div>
-        <div><span class="log-tag lt-spread" style="background:#052e16;color:#86efac">DIALOGUE</span></div>
-        <div class="log-desc"><b>First formal dialogue session</b> held at Bolivia's Vicepresidency, convened by VP Edmand Lara (himself an opponent of Paz). Present: govt ministers, Church, Defensoría del Pueblo, some social sectors. <span class="hi-red">Absent: COB, campesino leaders from La Paz, rural teachers</span> — many face arrest warrants. <b>Sole agreement: government will guarantee safe passage for leaders to attend the next session.</b> Follow-up meeting set for Thursday May 28, Seminario San Jerónimo, La Paz. Blockades continue uninterrupted.</div>
-      </div>
-      <div class="log-row" style="background: #0f0d00; border-left: 2px solid var(--amber);">
-        <div class="log-date">May 27, 2026</div>
-        <div><span class="log-tag lt-spread">NEW PEAK</span></div>
-        <div class="log-desc"><b>66 blockade points — new record</b> per ABC. Distribution: <b>La Paz 21 · Potosí 14 · Cochabamba 12 · Oruro 11 · Chuquisaca 4 · Santa Cruz 3.</b> La Jornada (Mexico) reports up to <b>150 points</b> when counting municipal and local roads in addition to the national network. Potosí's jump from 10 to 14 is directly relevant to the Tupiza–Uyuni tourist corridor.</div>
+        <div class="log-date">May 24–27, 2026</div>
+        <div><span class="log-tag lt-military">EXCEPTION LAW</span></div>
+        <div class="log-desc"><b>Congress repeals the law limiting states of exception, and Paz promulgates the change</b> — clearing the way for the military to be deployed in civil conflicts. Blockades hit successive records (59 → 66 points). The death toll rises to four, including a 12-year-old.</div>
       </div>
       <div class="log-row" style="background: #100600; border-left: 2px solid var(--red);">
-        <div class="log-date">May 28, 2026</div>
+        <div class="log-date">May 27–28, 2026</div>
         <div><span class="log-tag lt-violence">TALKS FAIL</span></div>
-        <div class="log-desc"><b>Second dialogue session collapses.</b> Convened by the Bolivian Episcopal Conference, the meeting again proceeded <span class="hi-red">without the two key protest leaders</span> — COB's Mario Argollo and Túpac Katari's Vicente Salazar — despite government guarantees they would not be arrested. The COB conditions any attendance on the <b>cancellation of arrest warrants</b> (Argollo faces "incitement and terrorism" charges). President Paz had warned he was inviting them <span class="hi-red">"for the last time."</span> Mediators now seek a formal lifting of the warrants.</div>
-      </div>
-      <div class="log-row" style="background: #100600; border-left: 2px solid var(--red);">
-        <div class="log-date">May 28, 2026</div>
-        <div><span class="log-tag lt-spread">CABILDO</span></div>
-        <div class="log-desc">In response, COB and Túpac Katari grassroots organisations call a <b>national <i>cabildo</i></b> (mass popular assembly) to decide whether to continue the mobilisation — raising the prospect of a hardening rather than a resolution. <b>64 blockades</b> active (La Paz 22, Potosí 15). Public transport drivers add a separate "indefinite strike," now in its 2nd day, over fuel-quality compensation.</div>
-      </div>
-      <div class="log-row" style="background: #100600; border-left: 2px solid var(--red);">
-        <div class="log-date">May 28, 2026</div>
-        <div><span class="log-tag lt-death">HEALTH</span></div>
-        <div class="log-desc"><b>Humanitarian situation deteriorating sharply.</b> The Medical College reports <span class="hi-red">blood reserves are "at the limit."</span> Hospitals face critical shortages of oxygen and medicine. The El Alto municipality estimates daily losses of <b>$6.5 million.</b> Government says a state of exception remains "an instrument to be evaluated by opportunity and need" — neither ruled in nor out.</div>
+        <div class="log-desc"><b>Two dialogue sessions collapse</b> as the two key protest leaders — COB's Mario Argollo and Túpac Katari's Vicente Salazar — stay away over outstanding arrest warrants. The demand hardens from economic grievances toward a single goal: the president's resignation. The humanitarian situation worsens sharply, with hospital oxygen and blood reserves "at the limit."</div>
       </div>
       <div class="log-row" style="background: #061206; border-left: 2px solid var(--open);">
         <div class="log-date">May 29, 2026</div>
         <div><span class="log-tag lt-spread" style="background:#052e16;color:#86efac">BREAKTHROUGH?</span></div>
-        <div class="log-desc"><b>Arrest warrants against the main protest leaders cancelled.</b> The key obstacle to dialogue — the aprehensión orders against COB leader Mario Argollo and Túpac Katari's Vicente Salazar — were lifted, removing their stated precondition for sitting at the table. <span class="hi-red">Blockades nonetheless rose to 76</span> that morning; medical staff marched demanding a "humanitarian pause." The opening is real but fragile.</div>
+        <div class="log-desc"><b>Arrest warrants against the main protest leaders cancelled,</b> removing their stated precondition for talks. <span class="hi-red">Blockades nonetheless rose to 76</span> that morning; medical staff marched demanding a "humanitarian pause." The opening is real but fragile.</div>
       </div>
       <div class="log-row" style="background: #100600; border-left: 2px solid var(--amber);">
         <div class="log-date">May 30, 2026</div>
@@ -1489,6 +1259,11 @@
         <div class="log-date">Jun 5, 2026</div>
         <div><span class="log-tag lt-spread">DAY 36</span></div>
         <div class="log-desc"><b>The crisis enters its 36th day with the death toll now reported at 10</b> and blockades holding around 90 points. The government is positioned to invoke a state of exception once Congress acts, while Paz insists the security forces would operate under a "humanitarian" mandate and repeats his offer of dialogue — <span class="hi-red">an offer the mobilised sectors continue to reject, demanding only his resignation.</span> A national holiday around Corpus Christi (5 June) further slows any return to normal economic activity. <span class="hi-a">No change for travellers: the altiplano remains impassable by road; fly between regions and reconfirm same-day.</span></div>
+      </div>
+      <div class="log-row" style="background: #0f0d00; border-left: 2px solid var(--amber);">
+        <div class="log-date">Jun 6, 2026</div>
+        <div><span class="log-tag lt-spread">DAY 37</span></div>
+        <div class="log-desc"><b>Paz again says he will not rule out a state of exception</b> while still calling for dialogue, saying he will decide the next step with his Defence and Government ministers. The enabling bill (which would allow up to 90 days) is advancing in the Legislative Assembly, and a <b>new Defence minister, Ernesto Justiniano, has been sworn in</b> after his predecessor resigned. Blockades hold around 90 points across seven departments and the death toll stands at 10. <span class="hi-a">For travellers, the situation is unchanged and tense: stay off all highland roads, treat Santa Cruz and Tarija as the safer anchors, and move between regions only by air.</span></div>
       </div>
     </div>
   </div>
@@ -1613,16 +1388,16 @@
     </div>
 
     <div class="dec-verdict">
-      <b>General guidance (5 June):</b> Air travel remains the only reliable way to move between regions, and all major airports are operating — though airport <i>access roads</i>, especially in La Paz, can be disrupted. <span class="go">Treat Santa Cruz and the eastern lowlands as the safe anchor</span> and <span class="nogo">treat the La Paz–Oruro–Cochabamba altiplano as off-limits by road.</span> The COB rejected dialogue on 31 May and the blockades hold around 90 points with no agreement in sight — and with the government now using force to clear some routes (Parotani, 3 June), confrontations could flare with little warning, so no traveller should build plans around near-term improvement. The single most important rule: <b>do not attempt long-distance road travel through the highlands</b>, and reconfirm any flight and airport-access status the same day you travel. Register with your embassy or consulate so you receive official alerts directly.
+      <b>General guidance (6 June):</b> Air travel remains the only reliable way to move between regions, and all major airports are operating — though airport <i>access roads</i>, especially in La Paz, can be disrupted. <span class="go">Treat Santa Cruz and the eastern lowlands as the safe anchor</span> and <span class="nogo">treat the La Paz–Oruro–Cochabamba altiplano as off-limits by road.</span> The COB rejected dialogue on 31 May and the blockades hold around 90 points with no agreement in sight — and with the government now using force to clear some routes (Parotani, 3 June), confrontations could flare with little warning, so no traveller should build plans around near-term improvement. The single most important rule: <b>do not attempt long-distance road travel through the highlands</b>, and reconfirm any flight and airport-access status the same day you travel. Register with your embassy or consulate so you receive official alerts directly.
     </div>
   </div>
 
   <div class="status-box">
     <div class="status-para">
-      <b>Trajectory:</b> <span class="hi-r">the stand-off has hardened and is now openly about Paz's survival.</span> After peaking at a record 93 blockades on 30 May, the count has held flat around 90–92 across seven departments. The COB rejected dialogue on 31 May, and a 2 June cabildo in El Alto reaffirmed that the blockades continue <span class="hi-r">until the president resigns</span> — explicitly dropping sector demands in favour of that single goal. On 3 June three ministers offered to resign and a combined police-military force cleared the Parotani bridge — the government's first notable use of force — while the transport unions piled on with their own ultimatum. The pressure is still building on both sides.
+      <b>Trajectory:</b> <span class="hi-r">the stand-off has hardened and is now openly about Paz's survival.</span> After peaking at a record 93 blockades on 30 May, the count has held flat around 90–92 across seven departments. The COB rejected dialogue on 31 May, and a 2 June cabildo in El Alto reaffirmed that the blockades continue <span class="hi-r">until the president resigns</span> — explicitly dropping sector demands in favour of that single goal. The government has begun answering with force — clearing the strategic Parotani bridge on 3 June — and on 5 June Paz stopped ruling out a formal state of exception, replacing his defence minister and advancing an enabling bill through Congress. The pressure is still building on both sides.
     </div>
     <div class="status-para">
-      <b>What comes next:</b> with negotiation rejected and the demand narrowed to resignation, the plausible paths are (1) the blockades grind on, deepening the food, fuel, oxygen and medicine shortages until economic and political exhaustion forces a resolution, or (2) Paz turns increasingly to force — on 3 June he sent Congress a state-of-exception bill and security forces cleared the Parotani bridge, the first such operation to succeed. <span class="hi-r">A wider crackdown risks sharp, possibly violent escalation</span>; earlier clearing attempts failed and analysts warn of civilian-versus-civilian confrontations. Paz frames any intervention as "humanitarian" and still offers dialogue, but the movement rejects anything short of his resignation. "Humanitarian corridors" for medicine and ambulances remain the one concession, and they function unevenly.
+      <b>What comes next:</b> with negotiation rejected and the demand narrowed to resignation, the plausible paths are (1) the blockades grind on, deepening the food, fuel, oxygen and medicine shortages until economic and political exhaustion forces a resolution, or (2) Paz turns increasingly to force — security forces cleared the Parotani bridge on 3 June, an enabling bill for a state of exception (up to 90 days) is advancing in Congress, and on 5 June he stopped ruling the measure out. <span class="hi-r">A wider crackdown risks sharp, possibly violent escalation</span>; earlier clearing attempts failed and analysts warn of civilian-versus-civilian confrontations. Paz frames any intervention as "humanitarian" and still offers dialogue, but the movement rejects anything short of his resignation. "Humanitarian corridors" for medicine and ambulances remain the one concession, and they function unevenly.
     </div>
     <div class="status-para">
       <b>Humanitarian backdrop:</b> worsening regardless of the politics. The death toll attributed to the crisis is now reported at <span class="hi-r">ten, most of them people who could not reach medical care</span> because of the blockades. La Paz department has declared a 90-day health and humanitarian emergency; hospitals are short of oxygen and medicine, and basic goods in La Paz and El Alto have doubled or tripled in price where they can be found at all.
@@ -1644,7 +1419,7 @@
 </div><!-- /container -->
 
 <footer class="footer">
-  <div>BOLIVIA CRISIS MONITOR · UPDATED 5 JUNE 2026 · TRAVEL SAFETY REFERENCE · NOT OFFICIAL ADVICE</div>
+  <div>BOLIVIA CRISIS MONITOR · UPDATED 6 JUNE 2026 · TRAVEL SAFETY REFERENCE · NOT OFFICIAL ADVICE</div>
   <div>LIVE ROAD STATUS → transitabilidad.abc.gob.bo · ALWAYS REGISTER WITH & CONTACT YOUR OWN EMBASSY OR CONSULATE</div>
 </footer>
 
