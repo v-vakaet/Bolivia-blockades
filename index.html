@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bolivia Crisis Monitor — 13 June 2026</title>
+<title>Bolivia Crisis Monitor — 16 June 2026</title>
 <!-- No external dependencies: uses system fonts so the page loads instantly and works fully offline. -->
 <style>
   :root {
@@ -103,6 +103,7 @@
     animation: pulse-a 1.8s ease-in-out infinite;
   }
   @keyframes pulse-a { 0%,100%{opacity:1} 50%{opacity:0.65} }
+  .alert-pill.alert-easing { background: var(--amber); color: #1a1400; }
 
   .day-counter {
     font-family: 'Arial Narrow', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
@@ -365,7 +366,7 @@
     overflow: hidden;
   }
   .status-box::before {
-    content: 'SITUATIONAL ASSESSMENT — 13 JUNE 2026';
+    content: 'SITUATIONAL ASSESSMENT — 16 JUNE 2026';
     display: block;
     font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace;
     font-size: 9px;
@@ -416,7 +417,7 @@
     overflow: hidden;
   }
   .decision-box::before {
-    content: '⚑ GUIDANCE FOR TRAVELLERS CURRENTLY IN BOLIVIA — 13 JUNE 2026';
+    content: '⚑ GUIDANCE FOR TRAVELLERS CURRENTLY IN BOLIVIA — 16 JUNE 2026';
     display: block;
     font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace;
     font-size: 9px;
@@ -736,14 +737,14 @@
 <header class="header">
   <div>
     <div class="header-title"><span class="country">BOLIVIA</span> — CRISIS MONITOR</div>
-    <div class="header-meta">SOURCE: ABC / RED UNO / EL DEBER / EFE / INFOBAE / LA RAZÓN / LA PATRIA · COMPILED 13 JUNE 2026</div>
+    <div class="header-meta">SOURCE: ABC / RED UNO / EL DEBER / EFE / INFOBAE / LA RAZÓN / LA PATRIA · COMPILED 16 JUNE 2026</div>
   </div>
   <div class="header-right">
     <div>
-      <div class="alert-pill">⚠ ALERT LEVEL: CRITICAL</div>
+      <div class="alert-pill alert-easing">⚠ ALERT LEVEL: HIGH · EASING</div>
     </div>
     <div class="day-counter">
-      DAY 44
+      DAY 47
       <span>of protests</span>
     </div>
   </div>
@@ -753,7 +754,7 @@
 
   <!-- LAST UPDATED — edit this stamp by hand each update -->
   <div class="updated-banner">
-    <span class="ub-stamp">Last updated: 13 June 2026, 09:00 BOT (Bolivia time)</span>
+    <span class="ub-stamp">Last updated: 16 June 2026, 09:00 BOT (Bolivia time)</span>
     <span class="ub-note">This is a snapshot. Road and border conditions change daily — always verify locally before travelling.</span>
   </div>
 
@@ -762,9 +763,9 @@
     <div class="sec-label">Current Situation</div>
     <div class="metrics-grid">
       <div class="metric-card mc-red">
-        <div class="metric-num">~84</div>
+        <div class="metric-num">~52</div>
         <div class="metric-label">Active Blockades</div>
-        <div class="metric-sub">ABC 12 Jun · easing slightly from ~93 · 6 departments · Cochabamba (32) &amp; La Paz (20) worst</div>
+        <div class="metric-sub">ABC 15 Jun · roughly halved from ~100 in two weeks · but the cut points are mostly rural — main inter-city trunk roads still blocked</div>
       </div>
       <div class="metric-card mc-amber">
         <div class="metric-num">10</div>
@@ -772,14 +773,14 @@
         <div class="metric-sub">Ombudsman: 10 dead, 37 injured, 360+ held · La Paz under 90-day health emergency</div>
       </div>
       <div class="metric-card mc-red">
-        <div class="metric-num" style="font-size:24px;">DIALOGUE<br>SIGNALS</div>
-        <div class="metric-label">First faint thaw</div>
-        <div class="metric-sub">COB &amp; Túpac Katari now talk of an "agenda" for dialogue, but hardliners still demand Paz quit</div>
+        <div class="metric-num" style="font-size:22px;">MOVEMENT<br>TIRING</div>
+        <div class="metric-label">COB delays decision</div>
+        <div class="metric-sub">leaders cite "weakening and tiredness"; some open to talks on an agenda, hardliners still hold out</div>
       </div>
       <div class="metric-card mc-amber">
-        <div class="metric-num" style="font-size:20px;">LAW IN<br>FORCE</div>
-        <div class="metric-label">Exception law · 8 Jun</div>
-        <div class="metric-sub">Paz promulgated it but has NOT declared a state of exception; no date set, dialogue still favoured</div>
+        <div class="metric-num" style="font-size:21px;">AIR<br>BRIDGE</div>
+        <div class="metric-label">Aid flights · 15 Jun</div>
+        <div class="metric-sub">US, Chile &amp; Argentina fly food (chicken) into La Paz; state-of-exception law in force but unused</div>
       </div>
     </div>
   </div>
@@ -843,40 +844,40 @@
             <text x="28" y="60.5" class="cx-yl">75</text>
             <line x1="34" y1="14.0" x2="370" y2="14.0" class="cx-grid"/>
             <text x="28" y="17.0" class="cx-yl">100</text>
-            <rect x="43.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
-            <text x="58.0" y="27.4" class="cx-val">90</text>
-            <text x="58.0" y="202.0" class="cx-xl">Sun 7</text>
-            <text x="58.0" y="213.0" class="cx-xl2">Jun 7</text>
-            <rect x="91.6" y="26.2" width="28.8" height="161.8" class="cx-bar peak" rx="1.5"/>
-            <text x="106.0" y="22.2" class="cx-val peak">93</text>
-            <text x="106.0" y="202.0" class="cx-xl">Mon 8</text>
-            <text x="106.0" y="213.0" class="cx-xl2">Jun 8</text>
-            <rect x="139.6" y="26.2" width="28.8" height="161.8" class="cx-bar peak" rx="1.5"/>
-            <text x="154.0" y="22.2" class="cx-val peak">93</text>
-            <text x="154.0" y="202.0" class="cx-xl">Tue 9</text>
-            <text x="154.0" y="213.0" class="cx-xl2">Jun 9</text>
-            <rect x="187.6" y="31.4" width="28.8" height="156.6" class="cx-bar" rx="1.5"/>
-            <text x="202.0" y="27.4" class="cx-val">90</text>
-            <text x="202.0" y="202.0" class="cx-xl">Wed 10</text>
-            <text x="202.0" y="213.0" class="cx-xl2">Jun 10</text>
-            <rect x="235.6" y="34.9" width="28.8" height="153.1" class="cx-bar" rx="1.5"/>
-            <text x="250.0" y="30.9" class="cx-val">88</text>
-            <text x="250.0" y="202.0" class="cx-xl">Thu 11</text>
-            <text x="250.0" y="213.0" class="cx-xl2">Jun 11</text>
-            <rect x="283.6" y="38.4" width="28.8" height="149.6" class="cx-bar" rx="1.5"/>
-            <text x="298.0" y="34.4" class="cx-val">86</text>
-            <text x="298.0" y="202.0" class="cx-xl">Fri 12</text>
-            <text x="298.0" y="213.0" class="cx-xl2">Jun 12</text>
-            <rect x="331.6" y="41.8" width="28.8" height="146.2" class="cx-bar" rx="1.5"/>
-            <text x="346.0" y="37.8" class="cx-val">84</text>
-            <text x="346.0" y="202.0" class="cx-xl">Sat 13</text>
-            <text x="346.0" y="213.0" class="cx-xl2">Jun 13</text>
+            <rect x="43.6" y="31.4" width="28.8" height="156.6" class="cx-bar peak" rx="1.5"/>
+            <text x="58.0" y="27.4" class="cx-val peak">90</text>
+            <text x="58.0" y="202.0" class="cx-xl">Wed 10</text>
+            <text x="58.0" y="213.0" class="cx-xl2">Jun 10</text>
+            <rect x="91.6" y="34.9" width="28.8" height="153.1" class="cx-bar" rx="1.5"/>
+            <text x="106.0" y="30.9" class="cx-val">88</text>
+            <text x="106.0" y="202.0" class="cx-xl">Thu 11</text>
+            <text x="106.0" y="213.0" class="cx-xl2">Jun 11</text>
+            <rect x="139.6" y="38.4" width="28.8" height="149.6" class="cx-bar" rx="1.5"/>
+            <text x="154.0" y="34.4" class="cx-val">86</text>
+            <text x="154.0" y="202.0" class="cx-xl">Fri 12</text>
+            <text x="154.0" y="213.0" class="cx-xl2">Jun 12</text>
+            <rect x="187.6" y="41.8" width="28.8" height="146.2" class="cx-bar" rx="1.5"/>
+            <text x="202.0" y="37.8" class="cx-val">84</text>
+            <text x="202.0" y="202.0" class="cx-xl">Sat 13</text>
+            <text x="202.0" y="213.0" class="cx-xl2">Jun 13</text>
+            <rect x="235.6" y="66.2" width="28.8" height="121.8" class="cx-bar" rx="1.5"/>
+            <text x="250.0" y="62.2" class="cx-val">70</text>
+            <text x="250.0" y="202.0" class="cx-xl">Sun 14</text>
+            <text x="250.0" y="213.0" class="cx-xl2">Jun 14</text>
+            <rect x="283.6" y="97.5" width="28.8" height="90.5" class="cx-bar" rx="1.5"/>
+            <text x="298.0" y="93.5" class="cx-val">52</text>
+            <text x="298.0" y="202.0" class="cx-xl">Mon 15</text>
+            <text x="298.0" y="213.0" class="cx-xl2">Jun 15</text>
+            <rect x="331.6" y="101.0" width="28.8" height="87.0" class="cx-bar" rx="1.5"/>
+            <text x="346.0" y="97.0" class="cx-val">50</text>
+            <text x="346.0" y="202.0" class="cx-xl">Tue 16</text>
+            <text x="346.0" y="213.0" class="cx-xl2">Jun 16</text>
           </svg>
         </div>
 
       </div>
       <div class="chart-note">
-        <b>Reading these together:</b> the weekly chart (left) shows the month-long climb from ~21 to a peak of 93; the daily chart (right) zooms into the last week — after the 30 May peak the count plateaued near 90 and has now begun a modest decline, to about 84 by 13 June across six departments. It is too early to call it a turning point: the law letting the president deploy the army is in force (promulgated 8 June) but unused, and the first tentative talk of a dialogue "agenda" has appeared. Both axes are blockade counts (0–100). Figures are ABC national-road-network reports; local/municipal blockades are not included.
+        <b>Reading these together:</b> the weekly chart (left) shows the month-long climb from ~21 to a peak of 93; the daily chart (right) zooms into the last week — and the decline has now become pronounced, with the count roughly halving from the high-90s to about 50 by 16 June across five departments. <b>But the count overstates the improvement for travellers:</b> the points being lifted are mostly rural and peripheral, while the strategic inter-city trunk roads — Cochabamba's links to La Paz (Patacamaya, Sica Sica, Lahuachaca), to Oruro (Caihuasi), to Santa Cruz (Huayllani, Colomi) and to Sucre (Cruce Vacas) — remain cut, leaving Cochabamba effectively ringed and bus terminals still suspending departures. Both axes are blockade counts (0–100). Figures are ABC national-road-network reports; local/municipal blockades are not included.
       </div>
     </div>
   </div>
@@ -1285,6 +1286,11 @@
         <div><span class="log-tag lt-spread">DAY 44</span></div>
         <div class="log-desc"><b>Blockades ease modestly to around 84 points</b> (six departments; Cochabamba ~32 and La Paz ~20 still worst) over the Corpus Christi long weekend. <span class="hi-a">Faint signs of a possible thaw:</span> the COB's secretary general spoke of the need to talk ("even countries at war reach dialogue"), Cochabamba's labour federation floated a "humanitarian pause," and Túpac Katari campesinos asked the government for a dialogue agenda — though hardliners tied to Evo Morales still vow to hold out. No state of exception has been declared. <span class="hi-a">For travellers, little practical change: highland roads remain unreliable and frequently cut, so keep to Santa Cruz and Tarija, move between regions by air, and reconfirm same-day.</span></div>
       </div>
+      <div class="log-row" style="background: #061206; border-left: 2px solid var(--open);">
+        <div class="log-date">Jun 16, 2026</div>
+        <div><span class="log-tag lt-spread" style="background:#052e16;color:#86efac">DAY 47 · EASING</span></div>
+        <div class="log-desc"><b>The blockades lose force markedly.</b> The ABC counted about 52 points on 15 June across five departments — <span class="hi-a">roughly half the ~100 of two weeks ago</span> — and the figure is still falling. The movement shows fatigue: the COB has postponed a decision on whether to continue, and some campesino leaders openly acknowledge "weakening and tiredness," while still conditioning any talks on a formal agenda. An <b>international air bridge</b> — relief flights from the US, Chile and Argentina — is now flying food into La Paz, where the government has begun selling low-price chicken, though private-market prices remain more than double normal and shortages of medicine and fuel persist. <span class="hi-a">For travellers, the headline easing is deceptive: the cleared points are largely rural, while the main inter-city corridors out of Cochabamba — to La Paz, Oruro, Santa Cruz and Sucre — are still blocked and bus terminals are still suspending departures. Treat overland travel as unreliable, favour air travel between regions, and confirm any road plan locally and same-day.</span></div>
+      </div>
     </div>
   </div>
 
@@ -1408,19 +1414,19 @@
     </div>
 
     <div class="dec-verdict">
-      <b>General guidance (13 June):</b> Air travel remains the only reliable way to move between regions, and all major airports are operating — though airport <i>access roads</i>, especially in La Paz, can be disrupted. <span class="go">Treat Santa Cruz and the eastern lowlands as the safe anchor</span> and <span class="nogo">treat the La Paz–Oruro–Cochabamba altiplano as off-limits by road.</span> The COB rejected dialogue on 31 May and the blockades hold around 90 points with no agreement in sight — and with the government now using force to clear some routes (Parotani, 3 June), confrontations could flare with little warning, so no traveller should build plans around near-term improvement. The single most important rule: <b>do not attempt long-distance road travel through the highlands</b>, and reconfirm any flight and airport-access status the same day you travel. Register with your embassy or consulate so you receive official alerts directly.
+      <b>General guidance (16 June):</b> Air travel remains the only reliable way to move between regions, and all major airports are operating — though airport <i>access roads</i>, especially in La Paz, can be disrupted. <span class="go">Treat Santa Cruz and the eastern lowlands as the safe anchor</span> and <span class="nogo">treat the La Paz–Oruro–Cochabamba altiplano as off-limits by road.</span> The total blockade count has roughly halved (to ~50), but <b>this is misleading for travel</b>: the points lifted are mostly rural, while the inter-city trunk roads linking Cochabamba to La Paz, Oruro, Santa Cruz and Sucre are still cut and bus terminals are still suspending departures. The single most important rule is unchanged: <b>do not attempt long-distance road travel through the highlands</b>, and reconfirm any flight and airport-access status the same day you travel. Register with your embassy or consulate so you receive official alerts directly.
     </div>
   </div>
 
   <div class="status-box">
     <div class="status-para">
-      <b>Trajectory:</b> <span class="hi-a">after six weeks the picture is, for the first time, slightly less bleak — but far from resolved.</span> Blockades peaked at 93 on 30 May, plateaued near 90, and have eased to about 84 by 13 June. Congress passed and Paz promulgated (8 June) a law letting him deploy the army, but <span class="hi-r">he has chosen not to invoke it</span>, keeping the door open to talks. The first tentative signals of dialogue have appeared — COB figures and Túpac Katari campesinos now speak of an "agenda" — even as hardliners tied to Evo Morales vow to hold out and the public itself fractures (a La Paz cabildo demanded both a crackdown and the COB leader's resignation).
+      <b>Trajectory:</b> <span class="hi-a">the crisis appears to be turning a corner, though it is not over.</span> Blockades peaked at 93 on 30 May and have now roughly halved, to about 52 by 15 June across five departments, with the figure still falling — though the points being lifted are mostly rural, so the main inter-city corridors stay cut and the practical isolation of cities like Cochabamba is little changed. The movement is showing fatigue: the COB has postponed a decision on continuing, and some leaders concede "weakening and tiredness." Paz never invoked the state-of-exception law he holds in reserve, betting instead on dialogue and on the protests losing steam — a bet that, for now, looks to be paying off. Hardliners tied to Evo Morales still vow to hold out, and the public is split (a La Paz cabildo had demanded a crackdown and the COB leader's resignation).
     </div>
     <div class="status-para">
-      <b>What comes next:</b> three paths are now in play. (1) The fledgling dialogue signals firm up into real negotiations and a gradual de-escalation begins — the most hopeful reading of the easing blockade count. (2) Talks stall and Paz finally invokes the state of exception, putting the army on the roads for up to 90 days; <span class="hi-r">a crackdown risks sharp, possibly violent escalation</span>, as the injured police and promptly-retaken route at San Julián showed. (3) The stalemate simply grinds on. The wildcard is the movement's own divisions: it is no longer a single bloc demanding resignation, which makes both a negotiated off-ramp and a sudden flare-up more possible.
+      <b>What comes next:</b> the most likely path now is a gradual wind-down as the blockades keep thinning and the government and tiring sectors edge toward talks. That is not guaranteed: hardliners could dig in, a flashpoint could reignite the confrontation, and the state-of-exception law remains in reserve if Paz judges force necessary — <span class="hi-r">a crackdown would still risk sharp escalation</span>, as the clash at San Julián showed. And even as roads reopen, the <span class="hi-r">humanitarian aftermath persists</span>: shortages, high prices and a damaged economy will outlast the barricades.
     </div>
     <div class="status-para">
-      <b>Humanitarian backdrop:</b> worsening regardless of the politics. The death toll attributed to the crisis is now reported at <span class="hi-r">ten, most of them people who could not reach medical care</span> because of the blockades. The Ombudsman also counts 37 injured and more than 360 detained. La Paz is under a 90-day health and humanitarian emergency; hospitals remain short of oxygen and medicine, and basic goods in La Paz and El Alto have been scarce and sharply more expensive, though the government says fuel and gas have started reaching the city again.
+      <b>Humanitarian backdrop:</b> worsening regardless of the politics. The death toll attributed to the crisis is now reported at <span class="hi-r">ten, most of them people who could not reach medical care</span> because of the blockades. The Ombudsman counts 10 dead, 37 injured and more than 360 detained. La Paz is under a 90-day health and humanitarian emergency; even as blockades thin, hospitals have faced shortages of oxygen and medicine, and food and fuel have been scarce and far more expensive. An international air bridge (US, Chile and Argentina) is now flying food into La Paz, and the government has begun selling low-price chicken, but private-market prices remain more than double normal — the supply crunch will take time to unwind.
     </div>
     <div class="status-para">
       <b>For travellers:</b> <span class="hi-g">the eastern lowlands (Santa Cruz) and the far south (Tarija) remain the most navigable areas, and air travel between regions still functions.</span> <span class="hi-r">The La Paz–Oruro–Cochabamba altiplano is the danger zone and should not be crossed by road.</span> With no diplomatic breakthrough in sight, the prudent posture is to avoid highland road travel entirely, keep to regions with functioning airports, and reconfirm flights and airport access on the day of travel rather than relying on conditions reported even a few hours earlier.
@@ -1439,7 +1445,7 @@
 </div><!-- /container -->
 
 <footer class="footer">
-  <div>BOLIVIA CRISIS MONITOR · UPDATED 13 JUNE 2026 · TRAVEL SAFETY REFERENCE · NOT OFFICIAL ADVICE</div>
+  <div>BOLIVIA CRISIS MONITOR · UPDATED 16 JUNE 2026 · TRAVEL SAFETY REFERENCE · NOT OFFICIAL ADVICE</div>
   <div>LIVE ROAD STATUS → transitabilidad.abc.gob.bo · ALWAYS REGISTER WITH & CONTACT YOUR OWN EMBASSY OR CONSULATE</div>
 </footer>
 
